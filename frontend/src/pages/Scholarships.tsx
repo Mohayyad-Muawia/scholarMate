@@ -19,7 +19,6 @@ export default function Scholarships() {
     fetchScholarships,
     currentScholarship,
     setCurrentScholarship,
-    page,
     limit,
     total,
     totalPages,
