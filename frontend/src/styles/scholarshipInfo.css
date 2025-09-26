@@ -1,0 +1,99 @@
+.scholarship-info {
+  .head {
+    padding: 0 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid var(--gray);
+
+    .logo {
+      padding: 15px;
+      background-color: var(--primary-50);
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .visit {
+      margin-right: auto;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-self: flex-start;
+      background-color: var(--secondary);
+      box-shadow: var(--shadow);
+      border-radius: 8px;
+    }
+  }
+  .details {
+    display: flex;
+    flex-flow: column;
+    gap: 15px;
+    padding: 20px 30px;
+    background-color: var(--secondary);
+    border-radius: 10px;
+    margin-top: 20px;
+
+    h4 {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    > div {
+      display: flex;
+      justify-content: space-between;
+      gap: 100px;
+
+      p {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      svg {
+        width: 22px;
+      }
+    }
+  }
+
+  .btns {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+
+    .visit-row {
+      width: 100%;
+    }
+
+    > div {
+      display: flex;
+      gap: 15px;
+    }
+
+    a {
+      min-width: fit-content;
+      flex: 1;
+      gap: 12px;
+
+      svg {
+        width: 20px;
+      }
+    }
+
+    .edit {
+      background-color: var(--primary-50);
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+
+    .delete {
+      background-color: var(--error-bg);
+      color: var(--error);
+      border: 2px solid var(--error);
+    }
+  }
+}

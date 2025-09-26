@@ -1,0 +1,96 @@
+.register,
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+  width: 100dvw;
+
+  .container {
+    display: flex;
+    gap: 40px;
+    padding: 10px;
+    background-color: var(--secondary);
+    height: 80%;
+    width: 75%;
+    box-shadow: var(--shadow);
+    border-radius: 20px;
+
+    .right {
+      flex: 1;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+
+      .title {
+        text-align: center;
+        margin-bottom: 30px;
+
+        h3 {
+          font-weight: normal;
+        }
+      }
+
+      form {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        width: 70%;
+
+        div {
+          display: flex;
+          flex-flow: column;
+          width: 100%;
+
+          label {
+            margin-bottom: 10px;
+            font-weight: bold;
+          }
+        }
+
+        .half {
+          width: calc(50% - 8px);
+        }
+
+        button {
+          width: 100%;
+          margin-top: 10px;
+        }
+      }
+
+      p {
+        margin-top: 20px;
+
+        a {
+          color: var(--primary);
+          font-weight: bold;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .left {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      background-color: var(--primary);
+
+      img {
+        width: 80%;
+        height: auto;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+.login .container {
+  height: 70%;
+  width: 70%;
+}

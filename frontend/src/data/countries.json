@@ -1,0 +1,333 @@
+{
+  "countries": [
+    {
+      "code": "AE",
+      "name_ar": "الإمارات",
+      "name_en": "United Arab Emirates",
+      "flag": "https://flagcdn.com/ae.svg",
+      "emoji": "🇦🇪"
+    },
+    {
+      "code": "BH",
+      "name_ar": "البحرين",
+      "name_en": "Bahrain",
+      "flag": "https://flagcdn.com/bh.svg",
+      "emoji": "🇧🇭"
+    },
+    {
+      "code": "DZ",
+      "name_ar": "الجزائر",
+      "name_en": "Algeria",
+      "flag": "https://flagcdn.com/dz.svg",
+      "emoji": "🇩🇿"
+    },
+    {
+      "code": "SA",
+      "name_ar": "السعودية",
+      "name_en": "Saudi Arabia",
+      "flag": "https://flagcdn.com/sa.svg",
+      "emoji": "🇸🇦"
+    },
+    {
+      "code": "SD",
+      "name_ar": "السودان",
+      "name_en": "Sudan",
+      "flag": "https://flagcdn.com/sd.svg",
+      "emoji": "🇸🇩"
+    },
+    {
+      "code": "SY",
+      "name_ar": "سوريا",
+      "name_en": "Syria",
+      "flag": "https://flagcdn.com/sy.svg",
+      "emoji": "🇸🇾"
+    },
+    {
+      "code": "SO",
+      "name_ar": "الصومال",
+      "name_en": "Somalia",
+      "flag": "https://flagcdn.com/so.svg",
+      "emoji": "🇸🇴"
+    },
+    {
+      "code": "IQ",
+      "name_ar": "العراق",
+      "name_en": "Iraq",
+      "flag": "https://flagcdn.com/iq.svg",
+      "emoji": "🇮🇶"
+    },
+    {
+      "code": "OM",
+      "name_ar": "عُمان",
+      "name_en": "Oman",
+      "flag": "https://flagcdn.com/om.svg",
+      "emoji": "🇴🇲"
+    },
+    {
+      "code": "PS",
+      "name_ar": "فلسطين",
+      "name_en": "Palestine",
+      "flag": "https://flagcdn.com/ps.svg",
+      "emoji": "🇵🇸"
+    },
+    {
+      "code": "QA",
+      "name_ar": "قطر",
+      "name_en": "Qatar",
+      "flag": "https://flagcdn.com/qa.svg",
+      "emoji": "🇶🇦"
+    },
+    {
+      "code": "KW",
+      "name_ar": "الكويت",
+      "name_en": "Kuwait",
+      "flag": "https://flagcdn.com/kw.svg",
+      "emoji": "🇰🇼"
+    },
+    {
+      "code": "LB",
+      "name_ar": "لبنان",
+      "name_en": "Lebanon",
+      "flag": "https://flagcdn.com/lb.svg",
+      "emoji": "🇱🇧"
+    },
+    {
+      "code": "LY",
+      "name_ar": "ليبيا",
+      "name_en": "Libya",
+      "flag": "https://flagcdn.com/ly.svg",
+      "emoji": "🇱🇾"
+    },
+    {
+      "code": "EG",
+      "name_ar": "مصر",
+      "name_en": "Egypt",
+      "flag": "https://flagcdn.com/eg.svg",
+      "emoji": "🇪🇬"
+    },
+    {
+      "code": "MA",
+      "name_ar": "المغرب",
+      "name_en": "Morocco",
+      "flag": "https://flagcdn.com/ma.svg",
+      "emoji": "🇲🇦"
+    },
+    {
+      "code": "MR",
+      "name_ar": "موريتانيا",
+      "name_en": "Mauritania",
+      "flag": "https://flagcdn.com/mr.svg",
+      "emoji": "🇲🇷"
+    },
+    {
+      "code": "JO",
+      "name_ar": "الأردن",
+      "name_en": "Jordan",
+      "flag": "https://flagcdn.com/jo.svg",
+      "emoji": "🇯🇴"
+    },
+    {
+      "code": "YE",
+      "name_ar": "اليمن",
+      "name_en": "Yemen",
+      "flag": "https://flagcdn.com/ye.svg",
+      "emoji": "🇾🇪"
+    },
+    {
+      "code": "TN",
+      "name_ar": "تونس",
+      "name_en": "Tunisia",
+      "flag": "https://flagcdn.com/tn.svg",
+      "emoji": "🇹🇳"
+    },
+    {
+      "code": "DJ",
+      "name_ar": "جيبوتي",
+      "name_en": "Djibouti",
+      "flag": "https://flagcdn.com/dj.svg",
+      "emoji": "🇩🇯"
+    },
+    {
+      "code": "KM",
+      "name_ar": "جزر القمر",
+      "name_en": "Comoros",
+      "flag": "https://flagcdn.com/km.svg",
+      "emoji": "🇰🇲"
+    },
+    {
+      "code": "AR",
+      "name_ar": "الأرجنتين",
+      "name_en": "Argentina",
+      "flag": "https://flagcdn.com/ar.svg",
+      "emoji": "🇦🇷"
+    },
+    {
+      "code": "AU",
+      "name_ar": "أستراليا",
+      "name_en": "Australia",
+      "flag": "https://flagcdn.com/au.svg",
+      "emoji": "🇦🇺"
+    },
+    {
+      "code": "BR",
+      "name_ar": "البرازيل",
+      "name_en": "Brazil",
+      "flag": "https://flagcdn.com/br.svg",
+      "emoji": "🇧🇷"
+    },
+    {
+      "code": "CA",
+      "name_ar": "كندا",
+      "name_en": "Canada",
+      "flag": "https://flagcdn.com/ca.svg",
+      "emoji": "🇨🇦"
+    },
+    {
+      "code": "CN",
+      "name_ar": "الصين",
+      "name_en": "China",
+      "flag": "https://flagcdn.com/cn.svg",
+      "emoji": "🇨🇳"
+    },
+    {
+      "code": "DE",
+      "name_ar": "ألمانيا",
+      "name_en": "Germany",
+      "flag": "https://flagcdn.com/de.svg",
+      "emoji": "🇩🇪"
+    },
+    {
+      "code": "FR",
+      "name_ar": "فرنسا",
+      "name_en": "France",
+      "flag": "https://flagcdn.com/fr.svg",
+      "emoji": "🇫🇷"
+    },
+    {
+      "code": "GB",
+      "name_ar": "المملكة المتحدة",
+      "name_en": "United Kingdom",
+      "flag": "https://flagcdn.com/gb.svg",
+      "emoji": "🇬🇧"
+    },
+    {
+      "code": "IT",
+      "name_ar": "إيطاليا",
+      "name_en": "Italy",
+      "flag": "https://flagcdn.com/it.svg",
+      "emoji": "🇮🇹"
+    },
+    {
+      "code": "JP",
+      "name_ar": "اليابان",
+      "name_en": "Japan",
+      "flag": "https://flagcdn.com/jp.svg",
+      "emoji": "🇯🇵"
+    },
+    {
+      "code": "KR",
+      "name_ar": "كوريا الجنوبية",
+      "name_en": "South Korea",
+      "flag": "https://flagcdn.com/kr.svg",
+      "emoji": "🇰🇷"
+    },
+    {
+      "code": "MX",
+      "name_ar": "المكسيك",
+      "name_en": "Mexico",
+      "flag": "https://flagcdn.com/mx.svg",
+      "emoji": "🇲🇽"
+    },
+    {
+      "code": "NL",
+      "name_ar": "هولندا",
+      "name_en": "Netherlands",
+      "flag": "https://flagcdn.com/nl.svg",
+      "emoji": "🇳🇱"
+    },
+    {
+      "code": "RU",
+      "name_ar": "روسيا",
+      "name_en": "Russia",
+      "flag": "https://flagcdn.com/ru.svg",
+      "emoji": "🇷🇺"
+    },
+    {
+      "code": "US",
+      "name_ar": "الولايات المتحدة",
+      "name_en": "United States",
+      "flag": "https://flagcdn.com/us.svg",
+      "emoji": "🇺🇸"
+    },
+    {
+      "code": "ES",
+      "name_ar": "إسبانيا",
+      "name_en": "Spain",
+      "flag": "https://flagcdn.com/es.svg",
+      "emoji": "🇪🇸"
+    },
+    {
+      "code": "SE",
+      "name_ar": "السويد",
+      "name_en": "Sweden",
+      "flag": "https://flagcdn.com/se.svg",
+      "emoji": "🇸🇪"
+    },
+    {
+      "code": "NO",
+      "name_ar": "النرويج",
+      "name_en": "Norway",
+      "flag": "https://flagcdn.com/no.svg",
+      "emoji": "🇳🇴"
+    },
+    {
+      "code": "FI",
+      "name_ar": "فنلندا",
+      "name_en": "Finland",
+      "flag": "https://flagcdn.com/fi.svg",
+      "emoji": "🇫🇮"
+    },
+    {
+      "code": "TR",
+      "name_ar": "تركيا",
+      "name_en": "Turkey",
+      "flag": "https://flagcdn.com/tr.svg",
+      "emoji": "🇹🇷"
+    },
+    {
+      "code": "SG",
+      "name_ar": "سنغافورة",
+      "name_en": "Singapore",
+      "flag": "https://flagcdn.com/sg.svg",
+      "emoji": "🇸🇬"
+    },
+    {
+      "code": "MY",
+      "name_ar": "ماليزيا",
+      "name_en": "Malaysia",
+      "flag": "https://flagcdn.com/my.svg",
+      "emoji": "🇲🇾"
+    },
+    {
+      "code": "ZA",
+      "name_ar": "جنوب أفريقيا",
+      "name_en": "South Africa",
+      "flag": "https://flagcdn.com/za.svg",
+      "emoji": "🇿🇦"
+    },
+    {
+      "code": "NG",
+      "name_ar": "نيجيريا",
+      "name_en": "Nigeria",
+      "flag": "https://flagcdn.com/ng.svg",
+      "emoji": "🇳🇬"
+    },
+    {
+      "code": "KE",
+      "name_ar": "كينيا",
+      "name_en": "Kenya",
+      "flag": "https://flagcdn.com/ke.svg",
+      "emoji": "🇰🇪"
+    }
+  ]
+}
