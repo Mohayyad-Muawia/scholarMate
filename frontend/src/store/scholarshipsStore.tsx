@@ -57,7 +57,6 @@ export const useScholarshipsStore = create<ScholarshipsState>((set, get) => ({
           totalPages: res.pagination.totalPages,
           isLoading: false,
         });
-        toast.success(`تم تحميل ${res.data.length} منحة`);
       } else {
         set({ error: res.error, isLoading: false });
         toast.error(res.error);

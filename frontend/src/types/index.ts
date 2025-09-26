@@ -20,6 +20,7 @@ export type Scholarship = {
     | "تم رفض الطلب"
     | "تم قبول الطلب";
   link: string;
+  createdAt?: Date;
 };
 
 export type User = {

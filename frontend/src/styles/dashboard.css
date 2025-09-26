@@ -9,9 +9,8 @@
     grid-template-columns: repeat(15, 1fr);
     grid-template-rows: repeat(8, 1fr);
     gap: 20px;
-    height: 100%; /* تاخد طول الداشبورد */
-    overflow-y: auto; /* نضيف سكرول عمودي إذا المحتوى أكبر */
-    padding-right: 10px; /* لو عايز تخلي السطر الأخير ما يقطع بالسكرول */
+    height: 100%;
+    overflow-y: auto;
     box-sizing: border-box;
   }
 

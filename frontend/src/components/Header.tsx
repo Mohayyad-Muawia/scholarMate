@@ -7,14 +7,14 @@ import { useState } from "react";
 import Modal from "./Modal";
 import AddForm from "./AddForm";
 
-export default function Header() {
+export default function Header({ title }: { title: string }) {
   const { theme, toggleTheme } = useThemeStore();
   const [showForm, setShowForm] = useState(false);
   return (
     <>
       <header>
         <div className="title">
-          <h2>لوحة التحكم</h2>
+          <h2>{title}</h2>
         </div>
         <div className="search">
           <input type="text" placeholder="ابحث عن شيء ما..." />

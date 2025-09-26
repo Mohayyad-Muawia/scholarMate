@@ -30,7 +30,7 @@ export default function Dashboard() {
 
   return (
     <div className="dashboard page">
-      <Header />
+      <Header title="لوحة التحكم" />
       <div className="container">
         <Greeting />
         <Calendar />
