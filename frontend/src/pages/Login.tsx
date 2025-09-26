@@ -2,9 +2,17 @@ import { Link, useNavigate } from "react-router-dom";
 import "../styles/auth.css";
 import { useState } from "react";
 import axios from "axios";
-import type { ApiResponse } from "../types";
+import type { ApiResponse, User } from "../types";
 import useUserStore from "../store/userStore";
 import toast from "react-hot-toast";
+
+interface RegisterResponse extends ApiResponse {
+  data?: {
+    user: User;
+    token: string;
+  };
+}
+
 export default function Login() {
   const navigate = useNavigate();
   const { login } = useUserStore();
@@ -17,7 +25,7 @@ export default function Login() {
     e.preventDefault();
     setIsLoading(true);
     try {
-      const response: ApiResponse = (
+      const response: RegisterResponse = (
         await axios.post("http://localhost:3000/auth/login", {
           email,
           password,

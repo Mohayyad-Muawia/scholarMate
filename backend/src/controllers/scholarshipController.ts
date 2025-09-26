@@ -13,8 +13,64 @@ export type ScholarshipType = {
   resultsDate?: string;
   status: "معلقة" | "في انتظار النتائج" | "مرفوضة" | "مقبولة";
   link: string;
+  createdAt: Date;
 };
 
+// GET Methods
+export const getScholarships = async (c: Context) => {
+  try {
+    const scholarships = await ScholarshipModel.find().sort({ deadline: 1 });
+    return sendResponse(
+      c,
+      200,
+      true,
+      "تم جلب المنح الدراسية بنجاح",
+      scholarships
+    );
+  } catch (err) {
+    return sendResponse(c, 500, false, "حصل خطأ في السيرفر", undefined, err);
+  }
+};
+
+export const getNearest = async (c: Context) => {
+  const { limit = "5" } = c.req.query();
+  try {
+    const scholarships = await ScholarshipModel.find({
+      deadline: { $gt: new Date() },
+    })
+      .sort({ deadline: 1 })
+      .limit(parseInt(limit));
+    return sendResponse(
+      c,
+      200,
+      true,
+      "تم جلب اقرب المنح الدراسية بنجاح",
+      scholarships
+    );
+  } catch (err) {
+    return sendResponse(c, 500, false, "حصل خطأ في السيرفر", undefined, err);
+  }
+};
+
+export const getLatest = async (c: Context) => {
+  const { limit = "5" } = c.req.query();
+  try {
+    const scholarships = await ScholarshipModel.find()
+      .sort({ createdAt: -1 })
+      .limit(parseInt(limit));
+    return sendResponse(
+      c,
+      200,
+      true,
+      "تم جلب آخر المنح الدراسية بنجاح",
+      scholarships
+    );
+  } catch (err) {
+    return sendResponse(c, 500, false, "حصل خطأ في السيرفر", undefined, err);
+  }
+};
+
+// POST & PATCH Methods
 export const addScholarship = async (c: Context) => {
   try {
     const body = await c.req.json<ScholarshipType>();
@@ -71,21 +127,6 @@ export const addScholarship = async (c: Context) => {
       true,
       "تم إضافة المنحة بنجاح",
       savedScholarship
-    );
-  } catch (err) {
-    return sendResponse(c, 500, false, "حصل خطأ في السيرفر", undefined, err);
-  }
-};
-
-export const getScholarships = async (c: Context) => {
-  try {
-    const scholarships = await ScholarshipModel.find().sort({ deadline: 1 });
-    return sendResponse(
-      c,
-      200,
-      true,
-      "تم جلب المنح الدراسية بنجاح",
-      scholarships
     );
   } catch (err) {
     return sendResponse(c, 500, false, "حصل خطأ في السيرفر", undefined, err);

@@ -38,6 +38,10 @@ const scholarshipScheama = new Schema({
     type: String,
     required: true,
   },
+  createdAt: {
+    type: Date,
+    default: Date.now,
+  },
 });
 
 const Scholarship = mongoose.model("Scholarship", scholarshipScheama);

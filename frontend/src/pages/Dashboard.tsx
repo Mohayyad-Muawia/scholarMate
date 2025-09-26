@@ -26,14 +26,13 @@ export default function Dashboard() {
         <Modal
           isOpen={!!selectedScholar}
           onClose={() => setSelectedScholar(null)}
-          className="details-modal"
         >
           <ScholarshipInfo
             scholarship={selectedScholar}
             onEdit={() => setShowForm(true)}
           />
         </Modal>
-        <Modal isOpen={showForm} onClose={() => {}} className="edit-modal">
+        <Modal isOpen={showForm} onClose={() => {}}>
           <AddForm
             close={() => setShowForm(false)}
             scholarshipToEdit={selectedScholar}
