@@ -6,7 +6,7 @@ export type ApiResponse<T = unknown> = {
 };
 
 export type Scholarship = {
-  id?: string;
+  _id?: string;
   title: string;
   description: string;
   country?: string;

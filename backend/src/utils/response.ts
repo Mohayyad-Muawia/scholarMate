@@ -1,11 +1,19 @@
 import { Context } from "hono";
 import { ContentfulStatusCode } from "hono/utils/http-status";
 
-type ApiResponse<T = any> = {
+export type Pagination = {
+  page: number;
+  limit: number;
+  total: number;
+  totalPages: number;
+};
+
+type ApiResponse<T = unknown> = {
   success: boolean;
-  message: string;
+  message?: string;
   data?: T;
-  error?: any;
+  pagination?: Pagination;
+  error?: unknown;
 };
 
 export function sendResponse<T>(
@@ -14,7 +22,8 @@ export function sendResponse<T>(
   success: boolean,
   message: string,
   data?: T,
-  error?: any
+  error?: unknown,
+  pagination?: Pagination
 ) {
   const response: ApiResponse<T> = {
     success,
@@ -23,6 +32,7 @@ export function sendResponse<T>(
 
   if (data !== undefined) response.data = data;
   if (error !== undefined) response.error = error;
+  if (pagination !== undefined) response.pagination = pagination;
 
   return c.json(response, status);
 }

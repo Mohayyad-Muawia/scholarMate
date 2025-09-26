@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
 import SelectCountry from "./SelectCountry";
 import "../styles/addForm.css";
-import type { ApiResponse } from "../types";
-import axios from "axios";
 import toast from "react-hot-toast";
 import type { Scholarship } from "../types/index";
+import { useScholarshipsStore } from "../store/scholarshipsStore";
 
 const text = {
   title: {
@@ -78,8 +77,9 @@ interface FormData {
 }
 
 export default function AddForm({ close, scholarshipToEdit }: AddFormProps) {
-  const [isLoading, setIsLoading] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
+  const { addScholarship, updateScholarship, isLoading } =
+    useScholarshipsStore();
 
   const [formData, setFormData] = useState<FormData>({
     title: "",
@@ -92,8 +92,6 @@ export default function AddForm({ close, scholarshipToEdit }: AddFormProps) {
     status: "لم يتم التقديم",
     link: "",
   });
-
-  const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
 
   const dateToString = (date: Date | string | undefined): string => {
     if (!date) return "";
@@ -149,51 +147,34 @@ export default function AddForm({ close, scholarshipToEdit }: AddFormProps) {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    setIsLoading(true);
-    try {
-      let response: ApiResponse;
+    const submissionData = {
+      ...formData,
+      deadline: stringToDate(formData.deadline),
+      resultsDate: formData.resultsDate
+        ? stringToDate(formData.resultsDate)
+        : undefined,
+      country: formData.country || undefined,
+    };
 
-      const submissionData = {
-        ...formData,
-        deadline: stringToDate(formData.deadline),
-        resultsDate: formData.resultsDate
-          ? stringToDate(formData.resultsDate)
-          : undefined,
-        country: formData.country || undefined,
-      };
+    console.log(scholarshipToEdit);
 
-      console.log(scholarshipToEdit);
+    if (isEditing && scholarshipToEdit?._id) {
+      // update form
+      const success = await updateScholarship(
+        scholarshipToEdit._id,
+        submissionData
+      );
 
-      if (isEditing && scholarshipToEdit?.id) {
-        response = (
-          await axios.patch(
-            `${API_URL}/scholarships/${scholarshipToEdit.id}`,
-            submissionData
-          )
-        ).data;
-      } else {
-        response = (
-          await axios.post(`${API_URL}/scholarships/add`, submissionData)
-        ).data;
-      }
-
-      if (response.success) {
-        toast.success(response.message);
+      if (success) {
         close();
-      } else {
-        toast.error(response.message);
       }
-    } catch (err: unknown) {
-      if (axios.isAxiosError(err)) {
-        const errorMessage = isEditing
-          ? "فشل تعديل المنحة"
-          : "فشلت اضافة المنحة";
-        toast.error(err.response?.data?.message || errorMessage);
-      } else {
-        toast.error("حدث خطأ غير متوقع");
+    } else {
+      // add form
+      const success = await addScholarship(submissionData);
+
+      if (success) {
+        close();
       }
-    } finally {
-      setIsLoading(false);
     }
   };
 

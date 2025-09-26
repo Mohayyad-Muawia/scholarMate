@@ -18,14 +18,23 @@ export type ScholarshipType = {
 
 // GET Methods
 export const getScholarships = async (c: Context) => {
+  const page = Number(c.req.query("page") || 1);
+  const limit = Number(c.req.query("limit") || 10);
+
+  const skip = (page - 1) * limit;
+
+  const total = await ScholarshipModel.countDocuments();
+  const totalPages = Math.ceil(total / limit);
   try {
-    const scholarships = await ScholarshipModel.find().sort({ deadline: 1 });
+    const scholarships = await ScholarshipModel.find().skip(skip).limit(limit);
     return sendResponse(
       c,
       200,
       true,
       "تم جلب المنح الدراسية بنجاح",
-      scholarships
+      scholarships,
+      undefined,
+      { page, limit, total, totalPages }
     );
   } catch (err) {
     return sendResponse(c, 500, false, "حصل خطأ في السيرفر", undefined, err);

@@ -1,20 +1,33 @@
+// components/Dashboard.tsx
 import "../styles/dashboard.css";
 import Greeting from "../components/Greeting";
 import Calendar from "../components/Calender";
 import Statistics from "../components/Statistics";
 import ClosestDeadlines from "../components/ClosestDeadlines";
 import Modal from "../components/Modal";
-import { useState } from "react";
-import type { Scholarship } from "../types";
+import { useState, useEffect } from "react";
 import ScholarshipInfo from "../components/ScholarshipInfo";
 import Header from "../components/Header";
 import AddForm from "../components/AddForm";
+import { useScholarshipsStore } from "../store/scholarshipsStore";
 
 export default function Dashboard() {
-  const [selectedScholar, setSelectedScholar] = useState<Scholarship | null>(
-    null
-  );
+  const { currentScholarship, setCurrentScholarship, scholarships } =
+    useScholarshipsStore();
+
   const [showForm, setShowForm] = useState(false);
+
+  useEffect(() => {
+    if (currentScholarship && currentScholarship._id) {
+      const updatedScholar = scholarships.find(
+        (s) => s._id === currentScholarship._id
+      );
+      if (updatedScholar) {
+        setCurrentScholarship(updatedScholar);
+      }
+    }
+  }, [scholarships, currentScholarship, setCurrentScholarship]);
+
   return (
     <div className="dashboard page">
       <Header />
@@ -22,20 +35,22 @@ export default function Dashboard() {
         <Greeting />
         <Calendar />
         <Statistics />
-        <ClosestDeadlines setSelectedScholar={setSelectedScholar} />
+        <ClosestDeadlines setSelectedScholar={setCurrentScholarship} />
+
         <Modal
-          isOpen={!!selectedScholar}
-          onClose={() => setSelectedScholar(null)}
+          isOpen={!!currentScholarship}
+          onClose={() => setCurrentScholarship(null)}
         >
           <ScholarshipInfo
-            scholarship={selectedScholar}
+            scholarship={currentScholarship ?? null}
             onEdit={() => setShowForm(true)}
           />
         </Modal>
+
         <Modal isOpen={showForm} onClose={() => {}}>
           <AddForm
             close={() => setShowForm(false)}
-            scholarshipToEdit={selectedScholar}
+            scholarshipToEdit={currentScholarship}
           />
         </Modal>
 
