@@ -1,8 +1,190 @@
 {
   "countries": [
     {
+      "code": "AZ",
+      "name_ar": "أذربيجان",
+      "name_en": "Azerbaijan",
+      "flag": "https://flagcdn.com/az.svg",
+      "emoji": "🇦🇿"
+    },
+    {
+      "code": "AM",
+      "name_ar": "أرمينيا",
+      "name_en": "Armenia",
+      "flag": "https://flagcdn.com/am.svg",
+      "emoji": "🇦🇲"
+    },
+    {
+      "code": "AW",
+      "name_ar": "أروبا",
+      "name_en": "Aruba",
+      "flag": "https://flagcdn.com/aw.svg",
+      "emoji": "🇦🇼"
+    },
+    {
+      "code": "ES",
+      "name_ar": "أسبانيا",
+      "name_en": "Spain",
+      "flag": "https://flagcdn.com/es.svg",
+      "emoji": "🇪🇸"
+    },
+    {
+      "code": "AU",
+      "name_ar": "أستراليا",
+      "name_en": "Australia",
+      "flag": "https://flagcdn.com/au.svg",
+      "emoji": "🇦🇺"
+    },
+    {
+      "code": "AF",
+      "name_ar": "أفغانستان",
+      "name_en": "Afghanistan",
+      "flag": "https://flagcdn.com/af.svg",
+      "emoji": "🇦🇫"
+    },
+    {
+      "code": "AL",
+      "name_ar": "ألبانيا",
+      "name_en": "Albania",
+      "flag": "https://flagcdn.com/al.svg",
+      "emoji": "🇦🇱"
+    },
+    {
+      "code": "DE",
+      "name_ar": "ألمانيا",
+      "name_en": "Germany",
+      "flag": "https://flagcdn.com/de.svg",
+      "emoji": "🇩🇪"
+    },
+    {
+      "code": "AG",
+      "name_ar": "أنتيجوا وبربودا",
+      "name_en": "Antigua and Barbuda",
+      "flag": "https://flagcdn.com/ag.svg",
+      "emoji": "🇦🇬"
+    },
+    {
+      "code": "AO",
+      "name_ar": "أنجولا",
+      "name_en": "Angola",
+      "flag": "https://flagcdn.com/ao.svg",
+      "emoji": "🇦🇴"
+    },
+    {
+      "code": "AI",
+      "name_ar": "أنجويلا",
+      "name_en": "Anguilla",
+      "flag": "https://flagcdn.com/ai.svg",
+      "emoji": "🇦🇮"
+    },
+    {
+      "code": "AD",
+      "name_ar": "أندورا",
+      "name_en": "Andorra",
+      "flag": "https://flagcdn.com/ad.svg",
+      "emoji": "🇦🇩"
+    },
+    {
+      "code": "ID",
+      "name_ar": "أندونيسيا",
+      "name_en": "Indonesia",
+      "flag": "https://flagcdn.com/id.svg",
+      "emoji": "🇮🇩"
+    },
+    {
+      "code": "UY",
+      "name_ar": "أوروجواي",
+      "name_en": "Uruguay",
+      "flag": "https://flagcdn.com/uy.svg",
+      "emoji": "🇺🇾"
+    },
+    {
+      "code": "UZ",
+      "name_ar": "أوزبكستان",
+      "name_en": "Uzbekistan",
+      "flag": "https://flagcdn.com/uz.svg",
+      "emoji": "🇺🇿"
+    },
+    {
+      "code": "UG",
+      "name_ar": "أوغندا",
+      "name_en": "Uganda",
+      "flag": "https://flagcdn.com/ug.svg",
+      "emoji": "🇺🇬"
+    },
+    {
+      "code": "UA",
+      "name_ar": "أوكرانيا",
+      "name_en": "Ukraine",
+      "flag": "https://flagcdn.com/ua.svg",
+      "emoji": "🇺🇦"
+    },
+    {
+      "code": "IE",
+      "name_ar": "أيرلندا",
+      "name_en": "Ireland",
+      "flag": "https://flagcdn.com/ie.svg",
+      "emoji": "🇮🇪"
+    },
+    {
+      "code": "IS",
+      "name_ar": "أيسلندا",
+      "name_en": "Iceland",
+      "flag": "https://flagcdn.com/is.svg",
+      "emoji": "🇮🇸"
+    },
+    {
+      "code": "IO",
+      "name_ar": "إقليم المحيط الهندي البريطاني",
+      "name_en": "British Indian Ocean Territory",
+      "flag": "https://flagcdn.com/io.svg",
+      "emoji": "🇮🇴"
+    },
+    {
+      "code": "ET",
+      "name_ar": "اثيوبيا",
+      "name_en": "Ethiopia",
+      "flag": "https://flagcdn.com/et.svg",
+      "emoji": "🇪🇹"
+    },
+    {
+      "code": "ER",
+      "name_ar": "اريتريا",
+      "name_en": "Eritrea",
+      "flag": "https://flagcdn.com/er.svg",
+      "emoji": "🇪🇷"
+    },
+    {
+      "code": "EE",
+      "name_ar": "استونيا",
+      "name_en": "Estonia",
+      "flag": "https://flagcdn.com/ee.svg",
+      "emoji": "🇪🇪"
+    },
+    {
+      "code": "AR",
+      "name_ar": "الأرجنتين",
+      "name_en": "Argentina",
+      "flag": "https://flagcdn.com/ar.svg",
+      "emoji": "🇦🇷"
+    },
+    {
+      "code": "JO",
+      "name_ar": "الأردن",
+      "name_en": "Jordan",
+      "flag": "https://flagcdn.com/jo.svg",
+      "emoji": "🇯🇴"
+    },
+    {
+      "code": "EC",
+      "name_ar": "الاكوادور",
+      "name_en": "Ecuador",
+      "flag": "https://flagcdn.com/ec.svg",
+      "emoji": "🇪🇨"
+    },
+    {
       "code": "AE",
-      "name_ar": "الإمارات",
+      "name_ar": "الامارات العربية المتحدة",
       "name_en": "United Arab Emirates",
       "flag": "https://flagcdn.com/ae.svg",
       "emoji": "🇦🇪"
@@ -15,6 +197,41 @@
       "emoji": "🇧🇭"
     },
     {
+      "code": "BR",
+      "name_ar": "البرازيل",
+      "name_en": "Brazil",
+      "flag": "https://flagcdn.com/br.svg",
+      "emoji": "🇧🇷"
+    },
+    {
+      "code": "PT",
+      "name_ar": "البرتغال",
+      "name_en": "Portugal",
+      "flag": "https://flagcdn.com/pt.svg",
+      "emoji": "🇵🇹"
+    },
+    {
+      "code": "BA",
+      "name_ar": "البوسنة والهرسك",
+      "name_en": "Bosnia and Herzegovina",
+      "flag": "https://flagcdn.com/ba.svg",
+      "emoji": "🇧🇦"
+    },
+    {
+      "code": "GA",
+      "name_ar": "الجابون",
+      "name_en": "Gabon",
+      "flag": "https://flagcdn.com/ga.svg",
+      "emoji": "🇬🇦"
+    },
+    {
+      "code": "ME",
+      "name_ar": "الجبل الأسود",
+      "name_en": "Montenegro",
+      "flag": "https://flagcdn.com/me.svg",
+      "emoji": "🇲🇪"
+    },
+    {
       "code": "DZ",
       "name_ar": "الجزائر",
       "name_en": "Algeria",
@@ -22,11 +239,32 @@
       "emoji": "🇩🇿"
     },
     {
-      "code": "SA",
-      "name_ar": "السعودية",
-      "name_en": "Saudi Arabia",
-      "flag": "https://flagcdn.com/sa.svg",
-      "emoji": "🇸🇦"
+      "code": "DK",
+      "name_ar": "الدانمرك",
+      "name_en": "Denmark",
+      "flag": "https://flagcdn.com/dk.svg",
+      "emoji": "🇩🇰"
+    },
+    {
+      "code": "CV",
+      "name_ar": "الرأس الأخضر",
+      "name_en": "Cape Verde",
+      "flag": "https://flagcdn.com/cv.svg",
+      "emoji": "🇨🇻"
+    },
+    {
+      "code": "SV",
+      "name_ar": "السلفادور",
+      "name_en": "El Salvador",
+      "flag": "https://flagcdn.com/sv.svg",
+      "emoji": "🇸🇻"
+    },
+    {
+      "code": "SN",
+      "name_ar": "السنغال",
+      "name_en": "Senegal",
+      "flag": "https://flagcdn.com/sn.svg",
+      "emoji": "🇸🇳"
     },
     {
       "code": "SD",
@@ -36,11 +274,18 @@
       "emoji": "🇸🇩"
     },
     {
-      "code": "SY",
-      "name_ar": "سوريا",
-      "name_en": "Syria",
-      "flag": "https://flagcdn.com/sy.svg",
-      "emoji": "🇸🇾"
+      "code": "SE",
+      "name_ar": "السويد",
+      "name_en": "Sweden",
+      "flag": "https://flagcdn.com/se.svg",
+      "emoji": "🇸🇪"
+    },
+    {
+      "code": "EH",
+      "name_ar": "الصحراء الغربية",
+      "name_en": "Western Sahara",
+      "flag": "https://flagcdn.com/eh.svg",
+      "emoji": "🇪🇭"
     },
     {
       "code": "SO",
@@ -50,6 +295,13 @@
       "emoji": "🇸🇴"
     },
     {
+      "code": "CN",
+      "name_ar": "الصين",
+      "name_en": "China",
+      "flag": "https://flagcdn.com/cn.svg",
+      "emoji": "🇨🇳"
+    },
+    {
       "code": "IQ",
       "name_ar": "العراق",
       "name_en": "Iraq",
@@ -57,25 +309,39 @@
       "emoji": "🇮🇶"
     },
     {
-      "code": "OM",
-      "name_ar": "عُمان",
-      "name_en": "Oman",
-      "flag": "https://flagcdn.com/om.svg",
-      "emoji": "🇴🇲"
+      "code": "VA",
+      "name_ar": "الفاتيكان",
+      "name_en": "Holy See (Vatican City State)",
+      "flag": "https://flagcdn.com/va.svg",
+      "emoji": "🇻🇦"
     },
     {
-      "code": "PS",
-      "name_ar": "فلسطين",
-      "name_en": "Palestine",
-      "flag": "https://flagcdn.com/ps.svg",
-      "emoji": "🇵🇸"
+      "code": "PH",
+      "name_ar": "الفلبين",
+      "name_en": "Philippines",
+      "flag": "https://flagcdn.com/ph.svg",
+      "emoji": "🇵🇭"
     },
     {
-      "code": "QA",
-      "name_ar": "قطر",
-      "name_en": "Qatar",
-      "flag": "https://flagcdn.com/qa.svg",
-      "emoji": "🇶🇦"
+      "code": "AQ",
+      "name_ar": "القطب الجنوبي",
+      "name_en": "Antarctica",
+      "flag": "https://flagcdn.com/aq.svg",
+      "emoji": "🇦🇶"
+    },
+    {
+      "code": "CM",
+      "name_ar": "الكاميرون",
+      "name_en": "Cameroon",
+      "flag": "https://flagcdn.com/cm.svg",
+      "emoji": "🇨🇲"
+    },
+    {
+      "code": "CG",
+      "name_ar": "الكونغو",
+      "name_en": "Congo",
+      "flag": "https://flagcdn.com/cg.svg",
+      "emoji": "🇨🇬"
     },
     {
       "code": "KW",
@@ -85,25 +351,11 @@
       "emoji": "🇰🇼"
     },
     {
-      "code": "LB",
-      "name_ar": "لبنان",
-      "name_en": "Lebanon",
-      "flag": "https://flagcdn.com/lb.svg",
-      "emoji": "🇱🇧"
-    },
-    {
-      "code": "LY",
-      "name_ar": "ليبيا",
-      "name_en": "Libya",
-      "flag": "https://flagcdn.com/ly.svg",
-      "emoji": "🇱🇾"
-    },
-    {
-      "code": "EG",
-      "name_ar": "مصر",
-      "name_en": "Egypt",
-      "flag": "https://flagcdn.com/eg.svg",
-      "emoji": "🇪🇬"
+      "code": "HU",
+      "name_ar": "المجر",
+      "name_en": "Hungary",
+      "flag": "https://flagcdn.com/hu.svg",
+      "emoji": "🇭🇺"
     },
     {
       "code": "MA",
@@ -113,95 +365,18 @@
       "emoji": "🇲🇦"
     },
     {
-      "code": "MR",
-      "name_ar": "موريتانيا",
-      "name_en": "Mauritania",
-      "flag": "https://flagcdn.com/mr.svg",
-      "emoji": "🇲🇷"
+      "code": "MX",
+      "name_ar": "المكسيك",
+      "name_en": "Mexico",
+      "flag": "https://flagcdn.com/mx.svg",
+      "emoji": "🇲🇽"
     },
     {
-      "code": "JO",
-      "name_ar": "الأردن",
-      "name_en": "Jordan",
-      "flag": "https://flagcdn.com/jo.svg",
-      "emoji": "🇯🇴"
-    },
-    {
-      "code": "YE",
-      "name_ar": "اليمن",
-      "name_en": "Yemen",
-      "flag": "https://flagcdn.com/ye.svg",
-      "emoji": "🇾🇪"
-    },
-    {
-      "code": "TN",
-      "name_ar": "تونس",
-      "name_en": "Tunisia",
-      "flag": "https://flagcdn.com/tn.svg",
-      "emoji": "🇹🇳"
-    },
-    {
-      "code": "DJ",
-      "name_ar": "جيبوتي",
-      "name_en": "Djibouti",
-      "flag": "https://flagcdn.com/dj.svg",
-      "emoji": "🇩🇯"
-    },
-    {
-      "code": "KM",
-      "name_ar": "جزر القمر",
-      "name_en": "Comoros",
-      "flag": "https://flagcdn.com/km.svg",
-      "emoji": "🇰🇲"
-    },
-    {
-      "code": "AR",
-      "name_ar": "الأرجنتين",
-      "name_en": "Argentina",
-      "flag": "https://flagcdn.com/ar.svg",
-      "emoji": "🇦🇷"
-    },
-    {
-      "code": "AU",
-      "name_ar": "أستراليا",
-      "name_en": "Australia",
-      "flag": "https://flagcdn.com/au.svg",
-      "emoji": "🇦🇺"
-    },
-    {
-      "code": "BR",
-      "name_ar": "البرازيل",
-      "name_en": "Brazil",
-      "flag": "https://flagcdn.com/br.svg",
-      "emoji": "🇧🇷"
-    },
-    {
-      "code": "CA",
-      "name_ar": "كندا",
-      "name_en": "Canada",
-      "flag": "https://flagcdn.com/ca.svg",
-      "emoji": "🇨🇦"
-    },
-    {
-      "code": "CN",
-      "name_ar": "الصين",
-      "name_en": "China",
-      "flag": "https://flagcdn.com/cn.svg",
-      "emoji": "🇨🇳"
-    },
-    {
-      "code": "DE",
-      "name_ar": "ألمانيا",
-      "name_en": "Germany",
-      "flag": "https://flagcdn.com/de.svg",
-      "emoji": "🇩🇪"
-    },
-    {
-      "code": "FR",
-      "name_ar": "فرنسا",
-      "name_en": "France",
-      "flag": "https://flagcdn.com/fr.svg",
-      "emoji": "🇫🇷"
+      "code": "SA",
+      "name_ar": "المملكة العربية السعودية",
+      "name_en": "Saudi Arabia",
+      "flag": "https://flagcdn.com/sa.svg",
+      "emoji": "🇸🇦"
     },
     {
       "code": "GB",
@@ -211,67 +386,11 @@
       "emoji": "🇬🇧"
     },
     {
-      "code": "IT",
-      "name_ar": "إيطاليا",
-      "name_en": "Italy",
-      "flag": "https://flagcdn.com/it.svg",
-      "emoji": "🇮🇹"
-    },
-    {
-      "code": "JP",
-      "name_ar": "اليابان",
-      "name_en": "Japan",
-      "flag": "https://flagcdn.com/jp.svg",
-      "emoji": "🇯🇵"
-    },
-    {
-      "code": "KR",
-      "name_ar": "كوريا الجنوبية",
-      "name_en": "South Korea",
-      "flag": "https://flagcdn.com/kr.svg",
-      "emoji": "🇰🇷"
-    },
-    {
-      "code": "MX",
-      "name_ar": "المكسيك",
-      "name_en": "Mexico",
-      "flag": "https://flagcdn.com/mx.svg",
-      "emoji": "🇲🇽"
-    },
-    {
-      "code": "NL",
-      "name_ar": "هولندا",
-      "name_en": "Netherlands",
-      "flag": "https://flagcdn.com/nl.svg",
-      "emoji": "🇳🇱"
-    },
-    {
-      "code": "RU",
-      "name_ar": "روسيا",
-      "name_en": "Russia",
-      "flag": "https://flagcdn.com/ru.svg",
-      "emoji": "🇷🇺"
-    },
-    {
-      "code": "US",
-      "name_ar": "الولايات المتحدة",
-      "name_en": "United States",
-      "flag": "https://flagcdn.com/us.svg",
-      "emoji": "🇺🇸"
-    },
-    {
-      "code": "ES",
-      "name_ar": "إسبانيا",
-      "name_en": "Spain",
-      "flag": "https://flagcdn.com/es.svg",
-      "emoji": "🇪🇸"
-    },
-    {
-      "code": "SE",
-      "name_ar": "السويد",
-      "name_en": "Sweden",
-      "flag": "https://flagcdn.com/se.svg",
-      "emoji": "🇸🇪"
+      "code": "TF",
+      "name_ar": "المناطق الجنوبية الفرنسية",
+      "name_en": "French Southern Territories",
+      "flag": "https://flagcdn.com/tf.svg",
+      "emoji": "🇹🇫"
     },
     {
       "code": "NO",
@@ -281,11 +400,256 @@
       "emoji": "🇳🇴"
     },
     {
-      "code": "FI",
-      "name_ar": "فنلندا",
-      "name_en": "Finland",
-      "flag": "https://flagcdn.com/fi.svg",
-      "emoji": "🇫🇮"
+      "code": "AT",
+      "name_ar": "النمسا",
+      "name_en": "Austria",
+      "flag": "https://flagcdn.com/at.svg",
+      "emoji": "🇦🇹"
+    },
+    {
+      "code": "NE",
+      "name_ar": "النيجر",
+      "name_en": "Niger",
+      "flag": "https://flagcdn.com/ne.svg",
+      "emoji": "🇳🇪"
+    },
+    {
+      "code": "IN",
+      "name_ar": "الهند",
+      "name_en": "India",
+      "flag": "https://flagcdn.com/in.svg",
+      "emoji": "🇮🇳"
+    },
+    {
+      "code": "US",
+      "name_ar": "الولايات المتحدة",
+      "name_en": "United States",
+      "flag": "https://flagcdn.com/us.svg",
+      "emoji": "🇺🇸"
+    },
+    {
+      "code": "JP",
+      "name_ar": "اليابان",
+      "name_en": "Japan",
+      "flag": "https://flagcdn.com/jp.svg",
+      "emoji": "🇯🇵"
+    },
+    {
+      "code": "YE",
+      "name_ar": "اليمن",
+      "name_en": "Yemen",
+      "flag": "https://flagcdn.com/ye.svg",
+      "emoji": "🇾🇪"
+    },
+    {
+      "code": "GR",
+      "name_ar": "اليونان",
+      "name_en": "Greece",
+      "flag": "https://flagcdn.com/gr.svg",
+      "emoji": "🇬🇷"
+    },
+    {
+      "code": "IR",
+      "name_ar": "ايران",
+      "name_en": "Iran, Islamic Republic of",
+      "flag": "https://flagcdn.com/ir.svg",
+      "emoji": "🇮🇷"
+    },
+    {
+      "code": "IT",
+      "name_ar": "ايطاليا",
+      "name_en": "Italy",
+      "flag": "https://flagcdn.com/it.svg",
+      "emoji": "🇮🇹"
+    },
+    {
+      "code": "PG",
+      "name_ar": "بابوا غينيا الجديدة",
+      "name_en": "Papua New Guinea",
+      "flag": "https://flagcdn.com/pg.svg",
+      "emoji": "🇵🇬"
+    },
+    {
+      "code": "PY",
+      "name_ar": "باراجواي",
+      "name_en": "Paraguay",
+      "flag": "https://flagcdn.com/py.svg",
+      "emoji": "🇵🇾"
+    },
+    {
+      "code": "PK",
+      "name_ar": "باكستان",
+      "name_en": "Pakistan",
+      "flag": "https://flagcdn.com/pk.svg",
+      "emoji": "🇵🇰"
+    },
+    {
+      "code": "PW",
+      "name_ar": "بالاو",
+      "name_en": "Palau",
+      "flag": "https://flagcdn.com/pw.svg",
+      "emoji": "🇵🇼"
+    },
+    {
+      "code": "BS",
+      "name_ar": "باهاماس",
+      "name_en": "Bahamas",
+      "flag": "https://flagcdn.com/bs.svg",
+      "emoji": "🇧🇸"
+    },
+    {
+      "code": "BB",
+      "name_ar": "بربادوس",
+      "name_en": "Barbados",
+      "flag": "https://flagcdn.com/bb.svg",
+      "emoji": "🇧🇧"
+    },
+    {
+      "code": "BM",
+      "name_ar": "برمودا",
+      "name_en": "Bermuda",
+      "flag": "https://flagcdn.com/bm.svg",
+      "emoji": "🇧🇲"
+    },
+    {
+      "code": "BN",
+      "name_ar": "بروناي",
+      "name_en": "Brunei Darussalam",
+      "flag": "https://flagcdn.com/bn.svg",
+      "emoji": "🇧🇳"
+    },
+    {
+      "code": "BE",
+      "name_ar": "بلجيكا",
+      "name_en": "Belgium",
+      "flag": "https://flagcdn.com/be.svg",
+      "emoji": "🇧🇪"
+    },
+    {
+      "code": "BG",
+      "name_ar": "بلغاريا",
+      "name_en": "Bulgaria",
+      "flag": "https://flagcdn.com/bg.svg",
+      "emoji": "🇧🇬"
+    },
+    {
+      "code": "BZ",
+      "name_ar": "بليز",
+      "name_en": "Belize",
+      "flag": "https://flagcdn.com/bz.svg",
+      "emoji": "🇧🇿"
+    },
+    {
+      "code": "BD",
+      "name_ar": "بنجلاديش",
+      "name_en": "Bangladesh",
+      "flag": "https://flagcdn.com/bd.svg",
+      "emoji": "🇧🇩"
+    },
+    {
+      "code": "PA",
+      "name_ar": "بنما",
+      "name_en": "Panama",
+      "flag": "https://flagcdn.com/pa.svg",
+      "emoji": "🇵🇦"
+    },
+    {
+      "code": "BJ",
+      "name_ar": "بنين",
+      "name_en": "Benin",
+      "flag": "https://flagcdn.com/bj.svg",
+      "emoji": "🇧🇯"
+    },
+    {
+      "code": "BT",
+      "name_ar": "بوتان",
+      "name_en": "Bhutan",
+      "flag": "https://flagcdn.com/bt.svg",
+      "emoji": "🇧🇹"
+    },
+    {
+      "code": "BW",
+      "name_ar": "بوتسوانا",
+      "name_en": "Botswana",
+      "flag": "https://flagcdn.com/bw.svg",
+      "emoji": "🇧🇼"
+    },
+    {
+      "code": "PR",
+      "name_ar": "بورتوريكو",
+      "name_en": "Puerto Rico",
+      "flag": "https://flagcdn.com/pr.svg",
+      "emoji": "🇵🇷"
+    },
+    {
+      "code": "BF",
+      "name_ar": "بوركينا فاسو",
+      "name_en": "Burkina Faso",
+      "flag": "https://flagcdn.com/bf.svg",
+      "emoji": "🇧🇫"
+    },
+    {
+      "code": "BI",
+      "name_ar": "بوروندي",
+      "name_en": "Burundi",
+      "flag": "https://flagcdn.com/bi.svg",
+      "emoji": "🇧🇮"
+    },
+    {
+      "code": "PL",
+      "name_ar": "بولندا",
+      "name_en": "Poland",
+      "flag": "https://flagcdn.com/pl.svg",
+      "emoji": "🇵🇱"
+    },
+    {
+      "code": "BO",
+      "name_ar": "بوليفيا",
+      "name_en": "Bolivia",
+      "flag": "https://flagcdn.com/bo.svg",
+      "emoji": "🇧🇴"
+    },
+    {
+      "code": "PF",
+      "name_ar": "بولينيزيا الفرنسية",
+      "name_en": "French Polynesia",
+      "flag": "https://flagcdn.com/pf.svg",
+      "emoji": "🇵🇫"
+    },
+    {
+      "code": "PN",
+      "name_ar": "بيتكيرن",
+      "name_en": "Pitcairn",
+      "flag": "https://flagcdn.com/pn.svg",
+      "emoji": "🇵🇳"
+    },
+    {
+      "code": "PE",
+      "name_ar": "بيرو",
+      "name_en": "Peru",
+      "flag": "https://flagcdn.com/pe.svg",
+      "emoji": "🇵🇪"
+    },
+    {
+      "code": "TH",
+      "name_ar": "تايلاند",
+      "name_en": "Thailand",
+      "flag": "https://flagcdn.com/th.svg",
+      "emoji": "🇹🇭"
+    },
+    {
+      "code": "TW",
+      "name_ar": "تايوان",
+      "name_en": "Taiwan, Province of China",
+      "flag": "https://flagcdn.com/tw.svg",
+      "emoji": "🇹🇼"
+    },
+    {
+      "code": "TM",
+      "name_ar": "تركمانستان",
+      "name_en": "Turkmenistan",
+      "flag": "https://flagcdn.com/tm.svg",
+      "emoji": "🇹🇲"
     },
     {
       "code": "TR",
@@ -295,11 +659,872 @@
       "emoji": "🇹🇷"
     },
     {
+      "code": "TT",
+      "name_ar": "ترينيداد وتوباغو",
+      "name_en": "Trinidad and Tobago",
+      "flag": "https://flagcdn.com/tt.svg",
+      "emoji": "🇹🇹"
+    },
+    {
+      "code": "TD",
+      "name_ar": "تشاد",
+      "name_en": "Chad",
+      "flag": "https://flagcdn.com/td.svg",
+      "emoji": "🇹🇩"
+    },
+    {
+      "code": "CL",
+      "name_ar": "تشيلي",
+      "name_en": "Chile",
+      "flag": "https://flagcdn.com/cl.svg",
+      "emoji": "🇨🇱"
+    },
+    {
+      "code": "TZ",
+      "name_ar": "تنزانيا",
+      "name_en": "Tanzania, United Republic of",
+      "flag": "https://flagcdn.com/tz.svg",
+      "emoji": "🇹🇿"
+    },
+    {
+      "code": "TG",
+      "name_ar": "توجو",
+      "name_en": "Togo",
+      "flag": "https://flagcdn.com/tg.svg",
+      "emoji": "🇹🇬"
+    },
+    {
+      "code": "TV",
+      "name_ar": "توفالو",
+      "name_en": "Tuvalu",
+      "flag": "https://flagcdn.com/tv.svg",
+      "emoji": "🇹🇻"
+    },
+    {
+      "code": "TK",
+      "name_ar": "توكيلاو",
+      "name_en": "Tokelau",
+      "flag": "https://flagcdn.com/tk.svg",
+      "emoji": "🇹🇰"
+    },
+    {
+      "code": "TO",
+      "name_ar": "تونجا",
+      "name_en": "Tonga",
+      "flag": "https://flagcdn.com/to.svg",
+      "emoji": "🇹🇴"
+    },
+    {
+      "code": "TN",
+      "name_ar": "تونس",
+      "name_en": "Tunisia",
+      "flag": "https://flagcdn.com/tn.svg",
+      "emoji": "🇹🇳"
+    },
+    {
+      "code": "TL",
+      "name_ar": "تيمور الشرقية",
+      "name_en": "Timor-Leste",
+      "flag": "https://flagcdn.com/tl.svg",
+      "emoji": "🇹🇱"
+    },
+    {
+      "code": "JM",
+      "name_ar": "جامايكا",
+      "name_en": "Jamaica",
+      "flag": "https://flagcdn.com/jm.svg",
+      "emoji": "🇯🇲"
+    },
+    {
+      "code": "GI",
+      "name_ar": "جبل طارق",
+      "name_en": "Gibraltar",
+      "flag": "https://flagcdn.com/gi.svg",
+      "emoji": "🇬🇮"
+    },
+    {
+      "code": "GD",
+      "name_ar": "جرينادا",
+      "name_en": "Grenada",
+      "flag": "https://flagcdn.com/gd.svg",
+      "emoji": "🇬🇩"
+    },
+    {
+      "code": "GL",
+      "name_ar": "جرينلاند",
+      "name_en": "Greenland",
+      "flag": "https://flagcdn.com/gl.svg",
+      "emoji": "🇬🇱"
+    },
+    {
+      "code": "AX",
+      "name_ar": "جزر أولاند",
+      "name_en": "Åland Islands",
+      "flag": "https://flagcdn.com/ax.svg",
+      "emoji": "🇦🇽"
+    },
+    {
+      "code": "KM",
+      "name_ar": "جزر القمر",
+      "name_en": "Comoros",
+      "flag": "https://flagcdn.com/km.svg",
+      "emoji": "🇰🇲"
+    },
+    {
+      "code": "MV",
+      "name_ar": "جزر المالديف",
+      "name_en": "Maldives",
+      "flag": "https://flagcdn.com/mv.svg",
+      "emoji": "🇲🇻"
+    },
+    {
+      "code": "UM",
+      "name_ar": "جزر الولايات المتحدة الصغيرة النائية",
+      "name_en": "United States Minor Outlying Islands",
+      "flag": "https://flagcdn.com/um.svg",
+      "emoji": "🇺🇲"
+    },
+    {
+      "code": "TC",
+      "name_ar": "جزر تركس وكايكوس",
+      "name_en": "Turks and Caicos Islands",
+      "flag": "https://flagcdn.com/tc.svg",
+      "emoji": "🇹🇨"
+    },
+    {
+      "code": "SB",
+      "name_ar": "جزر سليمان",
+      "name_en": "Solomon Islands",
+      "flag": "https://flagcdn.com/sb.svg",
+      "emoji": "🇸🇧"
+    },
+    {
+      "code": "FO",
+      "name_ar": "جزر فارو",
+      "name_en": "Faroe Islands",
+      "flag": "https://flagcdn.com/fo.svg",
+      "emoji": "🇫🇴"
+    },
+    {
+      "code": "FK",
+      "name_ar": "جزر فوكلاند",
+      "name_en": "Falkland Islands (Malvinas)",
+      "flag": "https://flagcdn.com/fk.svg",
+      "emoji": "🇫🇰"
+    },
+    {
+      "code": "VI",
+      "name_ar": "جزر فيرجن الأمريكية",
+      "name_en": "Virgin Islands, U.S.",
+      "flag": "https://flagcdn.com/vi.svg",
+      "emoji": "🇻🇮"
+    },
+    {
+      "code": "VG",
+      "name_ar": "جزر فيرجن البريطانية",
+      "name_en": "Virgin Islands, British",
+      "flag": "https://flagcdn.com/vg.svg",
+      "emoji": "🇻🇬"
+    },
+    {
+      "code": "KY",
+      "name_ar": "جزر كايمان",
+      "name_en": "Cayman Islands",
+      "flag": "https://flagcdn.com/ky.svg",
+      "emoji": "🇰🇾"
+    },
+    {
+      "code": "CK",
+      "name_ar": "جزر كوك",
+      "name_en": "Cook Islands",
+      "flag": "https://flagcdn.com/ck.svg",
+      "emoji": "🇨🇰"
+    },
+    {
+      "code": "CC",
+      "name_ar": "جزر كوكوس",
+      "name_en": "Cocos (Keeling) Islands",
+      "flag": "https://flagcdn.com/cc.svg",
+      "emoji": "🇨🇨"
+    },
+    {
+      "code": "MH",
+      "name_ar": "جزر مارشال",
+      "name_en": "Marshall Islands",
+      "flag": "https://flagcdn.com/mh.svg",
+      "emoji": "🇲🇭"
+    },
+    {
+      "code": "MP",
+      "name_ar": "جزر ماريانا الشمالية",
+      "name_en": "Northern Mariana Islands",
+      "flag": "https://flagcdn.com/mp.svg",
+      "emoji": "🇲🇵"
+    },
+    {
+      "code": "CX",
+      "name_ar": "جزيرة الكريسماس",
+      "name_en": "Christmas Island",
+      "flag": "https://flagcdn.com/cx.svg",
+      "emoji": "🇨🇽"
+    },
+    {
+      "code": "BV",
+      "name_ar": "جزيرة بوفيت",
+      "name_en": "Bouvet Island",
+      "flag": "https://flagcdn.com/bv.svg",
+      "emoji": "🇧🇻"
+    },
+    {
+      "code": "IM",
+      "name_ar": "جزيرة مان",
+      "name_en": "Isle of Man",
+      "flag": "https://flagcdn.com/im.svg",
+      "emoji": "🇮🇲"
+    },
+    {
+      "code": "NF",
+      "name_ar": "جزيرة نورفولك",
+      "name_en": "Norfolk Island",
+      "flag": "https://flagcdn.com/nf.svg",
+      "emoji": "🇳🇫"
+    },
+    {
+      "code": "HM",
+      "name_ar": "جزيرة هيرد وجزر ماكدونالد",
+      "name_en": "Heard Island and Mcdonald Islands",
+      "flag": "https://flagcdn.com/hm.svg",
+      "emoji": "🇭🇲"
+    },
+    {
+      "code": "CF",
+      "name_ar": "جمهورية افريقيا الوسطى",
+      "name_en": "Central African Republic",
+      "flag": "https://flagcdn.com/cf.svg",
+      "emoji": "🇨🇫"
+    },
+    {
+      "code": "CZ",
+      "name_ar": "جمهورية التشيك",
+      "name_en": "Czech Republic",
+      "flag": "https://flagcdn.com/cz.svg",
+      "emoji": "🇨🇿"
+    },
+    {
+      "code": "DO",
+      "name_ar": "جمهورية الدومينيكان",
+      "name_en": "Dominican Republic",
+      "flag": "https://flagcdn.com/do.svg",
+      "emoji": "🇩🇴"
+    },
+    {
+      "code": "CD",
+      "name_ar": "جمهورية الكونغو الديمقراطية",
+      "name_en": "Congo, The Democratic Republic of the Congo",
+      "flag": "https://flagcdn.com/cd.svg",
+      "emoji": "🇨🇩"
+    },
+    {
+      "code": "ZA",
+      "name_ar": "جنوب افريقيا",
+      "name_en": "South Africa",
+      "flag": "https://flagcdn.com/za.svg",
+      "emoji": "🇿🇦"
+    },
+    {
+      "code": "GT",
+      "name_ar": "جواتيمالا",
+      "name_en": "Guatemala",
+      "flag": "https://flagcdn.com/gt.svg",
+      "emoji": "🇬🇹"
+    },
+    {
+      "code": "GP",
+      "name_ar": "جوادلوب",
+      "name_en": "Guadeloupe",
+      "flag": "https://flagcdn.com/gp.svg",
+      "emoji": "🇬🇵"
+    },
+    {
+      "code": "GU",
+      "name_ar": "جوام",
+      "name_en": "Guam",
+      "flag": "https://flagcdn.com/gu.svg",
+      "emoji": "🇬🇺"
+    },
+    {
+      "code": "GE",
+      "name_ar": "جورجيا",
+      "name_en": "Georgia",
+      "flag": "https://flagcdn.com/ge.svg",
+      "emoji": "🇬🇪"
+    },
+    {
+      "code": "GS",
+      "name_ar": "جورجيا الجنوبية وجزر ساندويتش الجنوبية",
+      "name_en": "South Georgia and the South Sandwich Islands",
+      "flag": "https://flagcdn.com/gs.svg",
+      "emoji": "🇬🇸"
+    },
+    {
+      "code": "DJ",
+      "name_ar": "جيبوتي",
+      "name_en": "Djibouti",
+      "flag": "https://flagcdn.com/dj.svg",
+      "emoji": "🇩🇯"
+    },
+    {
+      "code": "JE",
+      "name_ar": "جيرسي",
+      "name_en": "Jersey",
+      "flag": "https://flagcdn.com/je.svg",
+      "emoji": "🇯🇪"
+    },
+    {
+      "code": "GG",
+      "name_ar": "جيرنزي",
+      "name_en": "Guernsey",
+      "flag": "https://flagcdn.com/gg.svg",
+      "emoji": "🇬🇬"
+    },
+    {
+      "code": "DM",
+      "name_ar": "دومينيكا",
+      "name_en": "Dominica",
+      "flag": "https://flagcdn.com/dm.svg",
+      "emoji": "🇩🇲"
+    },
+    {
+      "code": "RW",
+      "name_ar": "رواندا",
+      "name_en": "Rwanda",
+      "flag": "https://flagcdn.com/rw.svg",
+      "emoji": "🇷🇼"
+    },
+    {
+      "code": "RU",
+      "name_ar": "روسيا",
+      "name_en": "Russian Federation",
+      "flag": "https://flagcdn.com/ru.svg",
+      "emoji": "🇷🇺"
+    },
+    {
+      "code": "BY",
+      "name_ar": "روسيا البيضاء",
+      "name_en": "Belarus",
+      "flag": "https://flagcdn.com/by.svg",
+      "emoji": "🇧🇾"
+    },
+    {
+      "code": "RO",
+      "name_ar": "رومانيا",
+      "name_en": "Romania",
+      "flag": "https://flagcdn.com/ro.svg",
+      "emoji": "🇷🇴"
+    },
+    {
+      "code": "RE",
+      "name_ar": "روينيون",
+      "name_en": "Réunion",
+      "flag": "https://flagcdn.com/re.svg",
+      "emoji": "🇷🇪"
+    },
+    {
+      "code": "ZM",
+      "name_ar": "زامبيا",
+      "name_en": "Zambia",
+      "flag": "https://flagcdn.com/zm.svg",
+      "emoji": "🇿🇲"
+    },
+    {
+      "code": "ZW",
+      "name_ar": "زيمبابوي",
+      "name_en": "Zimbabwe",
+      "flag": "https://flagcdn.com/zw.svg",
+      "emoji": "🇿🇼"
+    },
+    {
+      "code": "CI",
+      "name_ar": "ساحل العاج",
+      "name_en": "Côte d'Ivoire",
+      "flag": "https://flagcdn.com/ci.svg",
+      "emoji": "🇨🇮"
+    },
+    {
+      "code": "WS",
+      "name_ar": "ساموا",
+      "name_en": "Samoa",
+      "flag": "https://flagcdn.com/ws.svg",
+      "emoji": "🇼🇸"
+    },
+    {
+      "code": "AS",
+      "name_ar": "ساموا الأمريكية",
+      "name_en": "American Samoa",
+      "flag": "https://flagcdn.com/as.svg",
+      "emoji": "🇦🇸"
+    },
+    {
+      "code": "BL",
+      "name_ar": "سان بارتيلمي",
+      "name_en": "Saint Barthélemy",
+      "flag": "https://flagcdn.com/bl.svg",
+      "emoji": "🇧🇱"
+    },
+    {
+      "code": "SM",
+      "name_ar": "سان مارينو",
+      "name_en": "San Marino",
+      "flag": "https://flagcdn.com/sm.svg",
+      "emoji": "🇸🇲"
+    },
+    {
+      "code": "PM",
+      "name_ar": "سانت بيير وميكلون",
+      "name_en": "Saint Pierre and Miquelon",
+      "flag": "https://flagcdn.com/pm.svg",
+      "emoji": "🇵🇲"
+    },
+    {
+      "code": "VC",
+      "name_ar": "سانت فنسنت وجزر غرينادين",
+      "name_en": "Saint Vincent and the Grenadines",
+      "flag": "https://flagcdn.com/vc.svg",
+      "emoji": "🇻🇨"
+    },
+    {
+      "code": "KN",
+      "name_ar": "سانت كيتس ونيفيس",
+      "name_en": "Saint Kitts and Nevis",
+      "flag": "https://flagcdn.com/kn.svg",
+      "emoji": "🇰🇳"
+    },
+    {
+      "code": "LC",
+      "name_ar": "سانت لوسيا",
+      "name_en": "Saint Lucia",
+      "flag": "https://flagcdn.com/lc.svg",
+      "emoji": "🇱🇨"
+    },
+    {
+      "code": "MF",
+      "name_ar": "سانت مارتن الفرنسية",
+      "name_en": "Saint Martin",
+      "flag": "https://flagcdn.com/mf.svg",
+      "emoji": "🇲🇫"
+    },
+    {
+      "code": "SH",
+      "name_ar": "سانت هيلينا وأسينشين وتريستان دا كونا",
+      "name_en": "Saint Helena, Ascension and Tristan Da Cunha",
+      "flag": "https://flagcdn.com/sh.svg",
+      "emoji": "🇸🇭"
+    },
+    {
+      "code": "ST",
+      "name_ar": "ساو تومي وبرينسيبي",
+      "name_en": "Sao Tome and Principe",
+      "flag": "https://flagcdn.com/st.svg",
+      "emoji": "🇸🇹"
+    },
+    {
+      "code": "LK",
+      "name_ar": "سريلانكا",
+      "name_en": "Sri Lanka",
+      "flag": "https://flagcdn.com/lk.svg",
+      "emoji": "🇱🇰"
+    },
+    {
+      "code": "SK",
+      "name_ar": "سلوفاكيا",
+      "name_en": "Slovakia",
+      "flag": "https://flagcdn.com/sk.svg",
+      "emoji": "🇸🇰"
+    },
+    {
+      "code": "SI",
+      "name_ar": "سلوفينيا",
+      "name_en": "Slovenia",
+      "flag": "https://flagcdn.com/si.svg",
+      "emoji": "🇸🇮"
+    },
+    {
       "code": "SG",
       "name_ar": "سنغافورة",
       "name_en": "Singapore",
       "flag": "https://flagcdn.com/sg.svg",
       "emoji": "🇸🇬"
+    },
+    {
+      "code": "SZ",
+      "name_ar": "سوازيلاند",
+      "name_en": "Swaziland",
+      "flag": "https://flagcdn.com/sz.svg",
+      "emoji": "🇸🇿"
+    },
+    {
+      "code": "SY",
+      "name_ar": "سوريا",
+      "name_en": "Syrian Arab Republic",
+      "flag": "https://flagcdn.com/sy.svg",
+      "emoji": "🇸🇾"
+    },
+    {
+      "code": "SR",
+      "name_ar": "سورينام",
+      "name_en": "Suriname",
+      "flag": "https://flagcdn.com/sr.svg",
+      "emoji": "🇸🇷"
+    },
+    {
+      "code": "CH",
+      "name_ar": "سويسرا",
+      "name_en": "Switzerland",
+      "flag": "https://flagcdn.com/ch.svg",
+      "emoji": "🇨🇭"
+    },
+    {
+      "code": "SL",
+      "name_ar": "سيراليون",
+      "name_en": "Sierra Leone",
+      "flag": "https://flagcdn.com/sl.svg",
+      "emoji": "🇸🇱"
+    },
+    {
+      "code": "SC",
+      "name_ar": "سيشل",
+      "name_en": "Seychelles",
+      "flag": "https://flagcdn.com/sc.svg",
+      "emoji": "🇸🇨"
+    },
+    {
+      "code": "RS",
+      "name_ar": "صربيا",
+      "name_en": "Serbia",
+      "flag": "https://flagcdn.com/rs.svg",
+      "emoji": "🇷🇸"
+    },
+    {
+      "code": "TJ",
+      "name_ar": "طاجيكستان",
+      "name_en": "Tajikistan",
+      "flag": "https://flagcdn.com/tj.svg",
+      "emoji": "🇹🇯"
+    },
+    {
+      "code": "OM",
+      "name_ar": "عمان",
+      "name_en": "Oman",
+      "flag": "https://flagcdn.com/om.svg",
+      "emoji": "🇴🇲"
+    },
+    {
+      "code": "GM",
+      "name_ar": "غامبيا",
+      "name_en": "Gambia",
+      "flag": "https://flagcdn.com/gm.svg",
+      "emoji": "🇬🇲"
+    },
+    {
+      "code": "GH",
+      "name_ar": "غانا",
+      "name_en": "Ghana",
+      "flag": "https://flagcdn.com/gh.svg",
+      "emoji": "🇬🇭"
+    },
+    {
+      "code": "GF",
+      "name_ar": "غويانا الفرنسية",
+      "name_en": "French Guiana",
+      "flag": "https://flagcdn.com/gf.svg",
+      "emoji": "🇬🇫"
+    },
+    {
+      "code": "GY",
+      "name_ar": "غيانا",
+      "name_en": "Guyana",
+      "flag": "https://flagcdn.com/gy.svg",
+      "emoji": "🇬🇾"
+    },
+    {
+      "code": "GN",
+      "name_ar": "غينيا",
+      "name_en": "Guinea",
+      "flag": "https://flagcdn.com/gn.svg",
+      "emoji": "🇬🇳"
+    },
+    {
+      "code": "GQ",
+      "name_ar": "غينيا الاستوائية",
+      "name_en": "Equatorial Guinea",
+      "flag": "https://flagcdn.com/gq.svg",
+      "emoji": "🇬🇶"
+    },
+    {
+      "code": "GW",
+      "name_ar": "غينيا بيساو",
+      "name_en": "Guinea-Bissau",
+      "flag": "https://flagcdn.com/gw.svg",
+      "emoji": "🇬🇼"
+    },
+    {
+      "code": "VU",
+      "name_ar": "فانواتو",
+      "name_en": "Vanuatu",
+      "flag": "https://flagcdn.com/vu.svg",
+      "emoji": "🇻🇺"
+    },
+    {
+      "code": "FR",
+      "name_ar": "فرنسا",
+      "name_en": "France",
+      "flag": "https://flagcdn.com/fr.svg",
+      "emoji": "🇫🇷"
+    },
+    {
+      "code": "PS",
+      "name_ar": "فلسطين",
+      "name_en": "Palestinian Territory, Occupied",
+      "flag": "https://flagcdn.com/ps.svg",
+      "emoji": "🇵🇸"
+    },
+    {
+      "code": "IL",
+      "name_ar": "فلسطين المحتلة",
+      "name_en": "Israel",
+      "flag": "https://flagcdn.com/il.svg",
+      "emoji": "🇮🇱"
+    },
+    {
+      "code": "VE",
+      "name_ar": "فنزويلا",
+      "name_en": "Venezuela",
+      "flag": "https://flagcdn.com/ve.svg",
+      "emoji": "🇻🇪"
+    },
+    {
+      "code": "FI",
+      "name_ar": "فنلندا",
+      "name_en": "Finland",
+      "flag": "https://flagcdn.com/fi.svg",
+      "emoji": "🇫🇮"
+    },
+    {
+      "code": "VN",
+      "name_ar": "فيتنام",
+      "name_en": "Viet Nam",
+      "flag": "https://flagcdn.com/vn.svg",
+      "emoji": "🇻🇳"
+    },
+    {
+      "code": "FJ",
+      "name_ar": "فيجي",
+      "name_en": "Fiji",
+      "flag": "https://flagcdn.com/fj.svg",
+      "emoji": "🇫🇯"
+    },
+    {
+      "code": "CY",
+      "name_ar": "قبرص",
+      "name_en": "Cyprus",
+      "flag": "https://flagcdn.com/cy.svg",
+      "emoji": "🇨🇾"
+    },
+    {
+      "code": "KG",
+      "name_ar": "قرغيزستان",
+      "name_en": "Kyrgyzstan",
+      "flag": "https://flagcdn.com/kg.svg",
+      "emoji": "🇰🇬"
+    },
+    {
+      "code": "QA",
+      "name_ar": "قطر",
+      "name_en": "Qatar",
+      "flag": "https://flagcdn.com/qa.svg",
+      "emoji": "🇶🇦"
+    },
+    {
+      "code": "KZ",
+      "name_ar": "كازاخستان",
+      "name_en": "Kazakhstan",
+      "flag": "https://flagcdn.com/kz.svg",
+      "emoji": "🇰🇿"
+    },
+    {
+      "code": "NC",
+      "name_ar": "كاليدونيا الجديدة",
+      "name_en": "New Caledonia",
+      "flag": "https://flagcdn.com/nc.svg",
+      "emoji": "🇳🇨"
+    },
+    {
+      "code": "HR",
+      "name_ar": "كرواتيا",
+      "name_en": "Croatia",
+      "flag": "https://flagcdn.com/hr.svg",
+      "emoji": "🇭🇷"
+    },
+    {
+      "code": "KH",
+      "name_ar": "كمبوديا",
+      "name_en": "Cambodia",
+      "flag": "https://flagcdn.com/kh.svg",
+      "emoji": "🇰🇭"
+    },
+    {
+      "code": "CA",
+      "name_ar": "كندا",
+      "name_en": "Canada",
+      "flag": "https://flagcdn.com/ca.svg",
+      "emoji": "🇨🇦"
+    },
+    {
+      "code": "CU",
+      "name_ar": "كوبا",
+      "name_en": "Cuba",
+      "flag": "https://flagcdn.com/cu.svg",
+      "emoji": "🇨🇺"
+    },
+    {
+      "code": "KR",
+      "name_ar": "كوريا الجنوبية",
+      "name_en": "Korea, Republic of",
+      "flag": "https://flagcdn.com/kr.svg",
+      "emoji": "🇰🇷"
+    },
+    {
+      "code": "KP",
+      "name_ar": "كوريا الشمالية",
+      "name_en": "Korea, Democratic People's Republic of",
+      "flag": "https://flagcdn.com/kp.svg",
+      "emoji": "🇰🇵"
+    },
+    {
+      "code": "CR",
+      "name_ar": "كوستاريكا",
+      "name_en": "Costa Rica",
+      "flag": "https://flagcdn.com/cr.svg",
+      "emoji": "🇨🇷"
+    },
+    {
+      "code": "CO",
+      "name_ar": "كولومبيا",
+      "name_en": "Colombia",
+      "flag": "https://flagcdn.com/co.svg",
+      "emoji": "🇨🇴"
+    },
+    {
+      "code": "KI",
+      "name_ar": "كيريباتي",
+      "name_en": "Kiribati",
+      "flag": "https://flagcdn.com/ki.svg",
+      "emoji": "🇰🇮"
+    },
+    {
+      "code": "KE",
+      "name_ar": "كينيا",
+      "name_en": "Kenya",
+      "flag": "https://flagcdn.com/ke.svg",
+      "emoji": "🇰🇪"
+    },
+    {
+      "code": "LV",
+      "name_ar": "لاتفيا",
+      "name_en": "Latvia",
+      "flag": "https://flagcdn.com/lv.svg",
+      "emoji": "🇱🇻"
+    },
+    {
+      "code": "LA",
+      "name_ar": "لاوس",
+      "name_en": "Lao People's Democratic Republic",
+      "flag": "https://flagcdn.com/la.svg",
+      "emoji": "🇱🇦"
+    },
+    {
+      "code": "LB",
+      "name_ar": "لبنان",
+      "name_en": "Lebanon",
+      "flag": "https://flagcdn.com/lb.svg",
+      "emoji": "🇱🇧"
+    },
+    {
+      "code": "LU",
+      "name_ar": "لوكسمبورج",
+      "name_en": "Luxembourg",
+      "flag": "https://flagcdn.com/lu.svg",
+      "emoji": "🇱🇺"
+    },
+    {
+      "code": "LY",
+      "name_ar": "ليبيا",
+      "name_en": "Libyan Arab Jamahiriya",
+      "flag": "https://flagcdn.com/ly.svg",
+      "emoji": "🇱🇾"
+    },
+    {
+      "code": "LR",
+      "name_ar": "ليبيريا",
+      "name_en": "Liberia",
+      "flag": "https://flagcdn.com/lr.svg",
+      "emoji": "🇱🇷"
+    },
+    {
+      "code": "LT",
+      "name_ar": "ليتوانيا",
+      "name_en": "Lithuania",
+      "flag": "https://flagcdn.com/lt.svg",
+      "emoji": "🇱🇹"
+    },
+    {
+      "code": "LI",
+      "name_ar": "ليختنشتاين",
+      "name_en": "Liechtenstein",
+      "flag": "https://flagcdn.com/li.svg",
+      "emoji": "🇱🇮"
+    },
+    {
+      "code": "LS",
+      "name_ar": "ليسوتو",
+      "name_en": "Lesotho",
+      "flag": "https://flagcdn.com/ls.svg",
+      "emoji": "🇱🇸"
+    },
+    {
+      "code": "MQ",
+      "name_ar": "مارتينيك",
+      "name_en": "Martinique",
+      "flag": "https://flagcdn.com/mq.svg",
+      "emoji": "🇲🇶"
+    },
+    {
+      "code": "MO",
+      "name_ar": "ماكاو",
+      "name_en": "Macao",
+      "flag": "https://flagcdn.com/mo.svg",
+      "emoji": "🇲🇴"
+    },
+    {
+      "code": "MW",
+      "name_ar": "مالاوي",
+      "name_en": "Malawi",
+      "flag": "https://flagcdn.com/mw.svg",
+      "emoji": "🇲🇼"
+    },
+    {
+      "code": "MT",
+      "name_ar": "مالطا",
+      "name_en": "Malta",
+      "flag": "https://flagcdn.com/mt.svg",
+      "emoji": "🇲🇹"
+    },
+    {
+      "code": "ML",
+      "name_ar": "مالي",
+      "name_en": "Mali",
+      "flag": "https://flagcdn.com/ml.svg",
+      "emoji": "🇲🇱"
     },
     {
       "code": "MY",
@@ -309,11 +1534,116 @@
       "emoji": "🇲🇾"
     },
     {
-      "code": "ZA",
-      "name_ar": "جنوب أفريقيا",
-      "name_en": "South Africa",
-      "flag": "https://flagcdn.com/za.svg",
-      "emoji": "🇿🇦"
+      "code": "FM",
+      "name_ar": "مايكرونيزيا",
+      "name_en": "Micronesia, Federated States of",
+      "flag": "https://flagcdn.com/fm.svg",
+      "emoji": "🇫🇲"
+    },
+    {
+      "code": "YT",
+      "name_ar": "مايوت",
+      "name_en": "Mayotte",
+      "flag": "https://flagcdn.com/yt.svg",
+      "emoji": "🇾🇹"
+    },
+    {
+      "code": "MG",
+      "name_ar": "مدغشقر",
+      "name_en": "Madagascar",
+      "flag": "https://flagcdn.com/mg.svg",
+      "emoji": "🇲🇬"
+    },
+    {
+      "code": "EG",
+      "name_ar": "مصر",
+      "name_en": "Egypt",
+      "flag": "https://flagcdn.com/eg.svg",
+      "emoji": "🇪🇬"
+    },
+    {
+      "code": "MK",
+      "name_ar": "مقدونيا",
+      "name_en": "Macedonia, The Former Yugoslav Republic of",
+      "flag": "https://flagcdn.com/mk.svg",
+      "emoji": "🇲🇰"
+    },
+    {
+      "code": "MN",
+      "name_ar": "منغوليا",
+      "name_en": "Mongolia",
+      "flag": "https://flagcdn.com/mn.svg",
+      "emoji": "🇲🇳"
+    },
+    {
+      "code": "MR",
+      "name_ar": "موريتانيا",
+      "name_en": "Mauritania",
+      "flag": "https://flagcdn.com/mr.svg",
+      "emoji": "🇲🇷"
+    },
+    {
+      "code": "MU",
+      "name_ar": "موريشيوس",
+      "name_en": "Mauritius",
+      "flag": "https://flagcdn.com/mu.svg",
+      "emoji": "🇲🇺"
+    },
+    {
+      "code": "MZ",
+      "name_ar": "موزمبيق",
+      "name_en": "Mozambique",
+      "flag": "https://flagcdn.com/mz.svg",
+      "emoji": "🇲🇿"
+    },
+    {
+      "code": "MD",
+      "name_ar": "مولدوفا",
+      "name_en": "Moldova, Republic of",
+      "flag": "https://flagcdn.com/md.svg",
+      "emoji": "🇲🇩"
+    },
+    {
+      "code": "MC",
+      "name_ar": "موناكو",
+      "name_en": "Monaco",
+      "flag": "https://flagcdn.com/mc.svg",
+      "emoji": "🇲🇨"
+    },
+    {
+      "code": "MS",
+      "name_ar": "مونتسيرات",
+      "name_en": "Montserrat",
+      "flag": "https://flagcdn.com/ms.svg",
+      "emoji": "🇲🇸"
+    },
+    {
+      "code": "MM",
+      "name_ar": "ميانمار",
+      "name_en": "Myanmar",
+      "flag": "https://flagcdn.com/mm.svg",
+      "emoji": "🇲🇲"
+    },
+    {
+      "code": "NA",
+      "name_ar": "ناميبيا",
+      "name_en": "Namibia",
+      "flag": "https://flagcdn.com/na.svg",
+      "emoji": "🇳🇦"
+    },
+    {
+      "code": "NR",
+      "name_ar": "ناورو",
+      "name_en": "Nauru",
+      "flag": "https://flagcdn.com/nr.svg",
+      "emoji": "🇳🇷"
+    },
+    {
+      "code": "NP",
+      "name_ar": "نيبال",
+      "name_en": "Nepal",
+      "flag": "https://flagcdn.com/np.svg",
+      "emoji": "🇳🇵"
     },
     {
       "code": "NG",
@@ -323,11 +1653,60 @@
       "emoji": "🇳🇬"
     },
     {
-      "code": "KE",
-      "name_ar": "كينيا",
-      "name_en": "Kenya",
-      "flag": "https://flagcdn.com/ke.svg",
-      "emoji": "🇰🇪"
+      "code": "NI",
+      "name_ar": "نيكاراجوا",
+      "name_en": "Nicaragua",
+      "flag": "https://flagcdn.com/ni.svg",
+      "emoji": "🇳🇮"
+    },
+    {
+      "code": "NZ",
+      "name_ar": "نيوزيلندا",
+      "name_en": "New Zealand",
+      "flag": "https://flagcdn.com/nz.svg",
+      "emoji": "🇳🇿"
+    },
+    {
+      "code": "NU",
+      "name_ar": "نيوي",
+      "name_en": "Niue",
+      "flag": "https://flagcdn.com/nu.svg",
+      "emoji": "🇳🇺"
+    },
+    {
+      "code": "HT",
+      "name_ar": "هايتي",
+      "name_en": "Haiti",
+      "flag": "https://flagcdn.com/ht.svg",
+      "emoji": "🇭🇹"
+    },
+    {
+      "code": "HN",
+      "name_ar": "هندوراس",
+      "name_en": "Honduras",
+      "flag": "https://flagcdn.com/hn.svg",
+      "emoji": "🇭🇳"
+    },
+    {
+      "code": "NL",
+      "name_ar": "هولندا",
+      "name_en": "Netherlands",
+      "flag": "https://flagcdn.com/nl.svg",
+      "emoji": "🇳🇱"
+    },
+    {
+      "code": "HK",
+      "name_ar": "هونج كونج",
+      "name_en": "Hong Kong",
+      "flag": "https://flagcdn.com/hk.svg",
+      "emoji": "🇭🇰"
+    },
+    {
+      "code": "WF",
+      "name_ar": "واليس وفوتونا",
+      "name_en": "Wallis and Futuna",
+      "flag": "https://flagcdn.com/wf.svg",
+      "emoji": "🇼🇫"
     }
   ]
 }

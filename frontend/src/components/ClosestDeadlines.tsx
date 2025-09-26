@@ -42,7 +42,7 @@ const mockScholarships: Scholarship[] = [
     link: "https://www.researchphd.edu/scholarship3",
   },
   {
-    id: "4",
+    id: "68d634a3b798a5ab53f9f9d5",
     title: "منحة دبلوم الإدارة",
     description: "منحة جزئية لدراسة دبلوم الإدارة",
     degreeLevel: "دبلوم",

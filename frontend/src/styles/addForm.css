@@ -1,0 +1,29 @@
+.addForm {
+  padding: 10px;
+  padding-top: 0;
+  form {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 40px;
+
+    > div {
+      width: calc(50% - 20px);
+      display: flex;
+      flex-flow: column;
+      gap: 10px;
+    }
+    .full {
+      width: 100%;
+    }
+
+    .btns {
+      margin-top: 10px;
+      display: flex;
+      flex-flow: row;
+      justify-content: end;
+      margin-right: auto;
+      gap: 20px;
+    }
+  }
+}

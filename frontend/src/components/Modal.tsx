@@ -5,6 +5,7 @@ type ModalProps = {
   isOpen: boolean;
   onClose: () => void;
   title?: string;
+  className?: string;
   children: React.ReactNode;
 };
 
@@ -12,6 +13,7 @@ export default function Modal({
   isOpen,
   onClose,
   title,
+  className,
   children,
 }: ModalProps) {
   return (
@@ -20,7 +22,7 @@ export default function Modal({
         <>
           {/* الخلفية */}
           <motion.div
-            className="modal-overlay"
+            className={`${className} modal-overlay`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -29,7 +31,7 @@ export default function Modal({
 
           {/* صندوق الـ Modal */}
           <motion.div
-            className="modal-box"
+            className={`${className} modal-box`}
             initial={{ opacity: 0, scale: 0.9, x: "-50%", y: "-30%" }}
             animate={{ opacity: 1, scale: 1, x: "-50%", y: "-50%" }}
             exit={{ opacity: 0, scale: 0.9, x: "-50%", y: "-30%" }}
