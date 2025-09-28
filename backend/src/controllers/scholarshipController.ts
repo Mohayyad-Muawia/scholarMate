@@ -280,34 +280,62 @@ export const getStatistics = async (c: Context) => {
   try {
     const user = c.get("user");
 
-    const statistics = await ScholarshipModel.aggregate([
-      { $match: { userId: user.id } },
-      {
-        $facet: {
-          total: [{ $count: "count" }],
-          byStatus: [{ $group: { _id: "$status", count: { $sum: 1 } } }],
-          byDegree: [{ $group: { _id: "$degreeLevel", count: { $sum: 1 } } }],
-          byCountry: [{ $group: { _id: "$country", count: { $sum: 1 } } }],
-          upcoming: [
-            {
-              $match: {
-                deadline: { $gt: new Date() },
-                status: "لم يتم التقديم",
-              },
-            },
-            { $count: "count" },
-          ],
-        },
-      },
-    ]);
+    console.log("Fetching statistics for user:", user.id);
 
-    return sendResponse(
-      c,
-      200,
-      true,
-      "تم جلب الإحصائيات بنجاح",
-      statistics[0] || {}
-    );
+    const allScholarships = await ScholarshipModel.find({ userId: user.id });
+
+    if (allScholarships.length === 0) {
+      console.log("No scholarships found, returning empty statistics");
+      return sendResponse(c, 200, true, "لا توجد منح لعرض الإحصائيات", {
+        total: [{ count: 0 }],
+        byStatus: [],
+        byDegree: [],
+        byCountry: [],
+        upcoming: [{ count: 0 }],
+      });
+    }
+
+    const statusStats: { [key: string]: number } = {};
+    const degreeStats: { [key: string]: number } = {};
+    const countryStats: { [key: string]: number } = {};
+
+    let upcomingCount = 0;
+
+    allScholarships.forEach((scholarship) => {
+      const status = scholarship.status;
+      statusStats[status] = (statusStats[status] || 0) + 1;
+
+      const degree = scholarship.degreeLevel;
+      degreeStats[degree] = (degreeStats[degree] || 0) + 1;
+
+      const country = scholarship.country || "غير محدد";
+      countryStats[country] = (countryStats[country] || 0) + 1;
+
+      const now = new Date();
+      const deadline = new Date(scholarship.deadline);
+      if (deadline > now && scholarship.status === "لم يتم التقديم") {
+        upcomingCount++;
+      }
+    });
+
+    const statistics = {
+      total: [{ count: allScholarships.length }],
+      byStatus: Object.entries(statusStats).map(([_id, count]) => ({
+        _id,
+        count,
+      })),
+      byDegree: Object.entries(degreeStats).map(([_id, count]) => ({
+        _id,
+        count,
+      })),
+      byCountry: Object.entries(countryStats).map(([_id, count]) => ({
+        _id,
+        count,
+      })),
+      upcoming: [{ count: upcomingCount }],
+    };
+
+    return sendResponse(c, 200, true, "تم جلب الإحصائيات بنجاح", statistics);
   } catch (err) {
     console.error("Error in getStatistics:", err);
     return sendResponse(c, 500, false, "حصل خطأ في السيرفر", undefined, err);

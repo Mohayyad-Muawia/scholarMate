@@ -12,7 +12,7 @@ import AddForm from "../components/AddForm";
 import { useScholarshipsStore } from "../store/scholarshipsStore";
 
 export default function Dashboard() {
-  const { currentScholarship, setCurrentScholarship, scholarships } =
+  const { scholarships, currentScholarship, setCurrentScholarship } =
     useScholarshipsStore();
 
   const [showForm, setShowForm] = useState(false);

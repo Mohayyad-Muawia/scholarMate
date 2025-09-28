@@ -1,6 +1,6 @@
 // stores/scholarshipsStore.ts
 import { create } from "zustand";
-import type { Scholarship } from "../types";
+import type { Scholarship, StatisticsData } from "../types";
 import * as api from "../api/scholarships";
 import toast from "react-hot-toast";
 
@@ -8,6 +8,7 @@ type ScholarshipsState = {
   scholarships: Scholarship[];
   upcomingScholarships: Scholarship[];
   currentScholarship?: Scholarship | null;
+  statistics: StatisticsData | null;
 
   page: number;
   limit: number;
@@ -19,6 +20,7 @@ type ScholarshipsState = {
 
   fetchScholarships: (page?: number, limit?: number) => Promise<void>;
   fetchUpcoming: (limit?: number) => Promise<void>;
+  fetchStatistics: () => Promise<void>;
 
   setCurrentScholarship: (sch?: Scholarship | null) => void;
 
@@ -33,6 +35,7 @@ export const useScholarshipsStore = create<ScholarshipsState>((set, get) => ({
   scholarships: [],
   upcomingScholarships: [],
   currentScholarship: null,
+  statistics: null,
 
   page: 1,
   limit: 10,
@@ -51,15 +54,15 @@ export const useScholarshipsStore = create<ScholarshipsState>((set, get) => ({
       if (res.success) {
         set({
           scholarships: res.data,
-          page: res.pagination.page,
-          limit: res.pagination.limit,
-          total: res.pagination.total,
-          totalPages: res.pagination.totalPages,
+          page: res.pagination?.page || page,
+          limit: res.pagination?.limit || limit,
+          total: res.pagination?.total || 0,
+          totalPages: res.pagination?.totalPages || 0,
           isLoading: false,
         });
       } else {
-        set({ error: res.error, isLoading: false });
-        toast.error(res.error);
+        set({ error: res.message, isLoading: false });
+        toast.error(res.message);
       }
     } catch (error) {
       const errorMsg = "فشل في تحميل المنح";
@@ -77,11 +80,30 @@ export const useScholarshipsStore = create<ScholarshipsState>((set, get) => ({
       if (res.success) {
         set({ upcomingScholarships: res.data, isLoading: false });
       } else {
-        set({ error: res.error, isLoading: false });
-        toast.error(res.error);
+        set({ error: res.message, isLoading: false });
+        toast.error(res.message);
       }
     } catch (error) {
       const errorMsg = "فشل في تحميل المنح القادمة";
+      set({ error: errorMsg, isLoading: false });
+      toast.error(errorMsg);
+    }
+  },
+
+  fetchStatistics: async () => {
+    set({ isLoading: true, error: null });
+
+    try {
+      const res = await api.getStatistics();
+
+      if (res.success) {
+        set({ statistics: res.data, isLoading: false });
+      } else {
+        set({ error: res.message, isLoading: false });
+        toast.error(res.message);
+      }
+    } catch (error) {
+      const errorMsg = "فشل في تحميل الإحصائيات";
       set({ error: errorMsg, isLoading: false });
       toast.error(errorMsg);
     }
@@ -101,12 +123,13 @@ export const useScholarshipsStore = create<ScholarshipsState>((set, get) => ({
         // إعادة تحميل البيانات
         await get().fetchScholarships(get().page, get().limit);
         await get().fetchUpcoming();
+        await get().fetchStatistics(); // تحديث الإحصائيات
 
         set({ isLoading: false });
         return true;
       } else {
-        set({ error: res.error, isLoading: false });
-        toast.error(res.error);
+        set({ error: res.message, isLoading: false });
+        toast.error(res.message);
         return false;
       }
     } catch (error) {
@@ -128,20 +151,21 @@ export const useScholarshipsStore = create<ScholarshipsState>((set, get) => ({
 
         set((s) => ({
           scholarships: s.scholarships.map((x) =>
-            x._id === id ? res.data : x
+            x._id === id ? { ...x, ...res.data } : x
           ),
           currentScholarship:
             s.currentScholarship && s.currentScholarship._id === id
-              ? res.data
+              ? { ...s.currentScholarship, ...res.data }
               : s.currentScholarship,
           isLoading: false,
         }));
 
         await get().fetchUpcoming();
+        await get().fetchStatistics(); // تحديث الإحصائيات
         return true;
       } else {
-        set({ error: res.error, isLoading: false });
-        toast.error(res.error);
+        set({ error: res.message, isLoading: false });
+        toast.error(res.message);
         return false;
       }
     } catch (error) {
@@ -171,10 +195,11 @@ export const useScholarshipsStore = create<ScholarshipsState>((set, get) => ({
         }));
 
         await get().fetchUpcoming();
+        await get().fetchStatistics(); // تحديث الإحصائيات
         return true;
       } else {
-        set({ error: res.error, isLoading: false });
-        toast.error(res.error);
+        set({ error: res.message, isLoading: false });
+        toast.error(res.message);
         return false;
       }
     } catch (error) {

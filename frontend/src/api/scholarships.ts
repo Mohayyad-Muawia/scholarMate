@@ -84,3 +84,12 @@ export async function deleteScholarship(id: string) {
     return handleApiError(error);
   }
 }
+
+export async function getStatistics() {
+  try {
+    const res = await api.get("/scholarships/statistics");
+    return res.data;
+  } catch (error) {
+    return handleApiError(error);
+  }
+}

@@ -29,3 +29,30 @@ export type User = {
   email: string;
   password: string;
 };
+
+export interface StatisticsData {
+  total: { count: number }[];
+  byStatus: StatusStat[];
+  byDegree: DegreeStat[];
+  byCountry: CountryStat[];
+  upcoming: { count: number }[];
+}
+
+export interface StatusStat {
+  _id:
+    | "لم يتم التقديم"
+    | "في انتظار النتيجة"
+    | "تم رفض الطلب"
+    | "تم قبول الطلب";
+  count: number;
+}
+
+export interface DegreeStat {
+  _id: "بكالوريوس" | "ماجستير" | "دكتوراه" | "دبلوم" | "أخرى";
+  count: number;
+}
+
+export interface CountryStat {
+  _id: string;
+  count: number;
+}
