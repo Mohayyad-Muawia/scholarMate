@@ -11,22 +11,32 @@ export type ScholarshipType = {
   fundingType: "كامل" | "جزئي" | "ذاتي";
   deadline: string;
   resultsDate?: string;
-  status: "معلقة" | "في انتظار النتائج" | "مرفوضة" | "مقبولة";
+  status:
+    | "لم يتم التقديم"
+    | "في انتظار النتيجة"
+    | "تم رفض الطلب"
+    | "تم قبول الطلب";
   link: string;
   createdAt: Date;
 };
 
 // GET Methods
 export const getScholarships = async (c: Context) => {
-  const page = Number(c.req.query("page") || 1);
-  const limit = Number(c.req.query("limit") || 10);
-
-  const skip = (page - 1) * limit;
-
-  const total = await ScholarshipModel.countDocuments();
-  const totalPages = Math.ceil(total / limit);
   try {
-    const scholarships = await ScholarshipModel.find().skip(skip).limit(limit);
+    const user = c.get("user");
+
+    const page = Number(c.req.query("page") || 1);
+    const limit = Number(c.req.query("limit") || 10);
+    const skip = (page - 1) * limit;
+
+    const total = await ScholarshipModel.countDocuments({ userId: user.id });
+    const totalPages = Math.ceil(total / limit);
+
+    const scholarships = await ScholarshipModel.find({ userId: user.id })
+      .skip(skip)
+      .limit(limit)
+      .sort({ createdAt: -1 });
+
     return sendResponse(
       c,
       200,
@@ -37,18 +47,24 @@ export const getScholarships = async (c: Context) => {
       { page, limit, total, totalPages }
     );
   } catch (err) {
+    console.error("Error in getScholarships:", err);
     return sendResponse(c, 500, false, "حصل خطأ في السيرفر", undefined, err);
   }
 };
 
 export const getNearest = async (c: Context) => {
-  const { limit = "5" } = c.req.query();
   try {
+    const user = c.get("user");
+    const { limit = "5" } = c.req.query();
+
     const scholarships = await ScholarshipModel.find({
+      userId: user.id,
       deadline: { $gt: new Date() },
+      status: "لم يتم التقديم",
     })
       .sort({ deadline: 1 })
       .limit(parseInt(limit));
+
     return sendResponse(
       c,
       200,
@@ -57,16 +73,20 @@ export const getNearest = async (c: Context) => {
       scholarships
     );
   } catch (err) {
+    console.error("Error in getNearest:", err);
     return sendResponse(c, 500, false, "حصل خطأ في السيرفر", undefined, err);
   }
 };
 
 export const getLatest = async (c: Context) => {
-  const { limit = "5" } = c.req.query();
   try {
-    const scholarships = await ScholarshipModel.find()
+    const user = c.get("user");
+    const { limit = "5" } = c.req.query();
+
+    const scholarships = await ScholarshipModel.find({ userId: user.id })
       .sort({ createdAt: -1 })
       .limit(parseInt(limit));
+
     return sendResponse(
       c,
       200,
@@ -75,6 +95,7 @@ export const getLatest = async (c: Context) => {
       scholarships
     );
   } catch (err) {
+    console.error("Error in getLatest:", err);
     return sendResponse(c, 500, false, "حصل خطأ في السيرفر", undefined, err);
   }
 };
@@ -82,7 +103,9 @@ export const getLatest = async (c: Context) => {
 // POST & PATCH Methods
 export const addScholarship = async (c: Context) => {
   try {
-    const body = await c.req.json<ScholarshipType>();
+    const user = c.get("user");
+    const body = await c.req.json();
+
     const {
       title,
       description,
@@ -109,10 +132,22 @@ export const addScholarship = async (c: Context) => {
 
     const parsedDeadline = new Date(deadline);
     if (isNaN(parsedDeadline.getTime())) {
-      return sendResponse(c, 400, false, "تاريخ غير صالح");
+      return sendResponse(c, 400, false, "تاريخ الانتهاء غير صالح");
     }
 
-    const existingScholarship = await ScholarshipModel.findOne({ title });
+    let parsedResultsDate;
+    if (resultsDate) {
+      parsedResultsDate = new Date(resultsDate);
+      if (isNaN(parsedResultsDate.getTime())) {
+        return sendResponse(c, 400, false, "تاريخ النتائج غير صالح");
+      }
+    }
+
+    const existingScholarship = await ScholarshipModel.findOne({
+      title,
+      userId: user.id,
+    });
+
     if (existingScholarship) {
       return sendResponse(c, 400, false, "هذه المنحة مسجلة بالفعل");
     }
@@ -124,9 +159,10 @@ export const addScholarship = async (c: Context) => {
       degreeLevel,
       fundingType,
       deadline: parsedDeadline,
-      resultsDate: resultsDate ? new Date(resultsDate) : undefined,
+      resultsDate: parsedResultsDate,
       status,
       link,
+      userId: user.id,
     });
 
     const savedScholarship = await newScholarship.save();
@@ -138,33 +174,56 @@ export const addScholarship = async (c: Context) => {
       savedScholarship
     );
   } catch (err) {
+    console.error("Error in addScholarship:", err);
     return sendResponse(c, 500, false, "حصل خطأ في السيرفر", undefined, err);
   }
 };
 
 export const updateScholarship = async (c: Context) => {
   try {
+    const user = c.get("user");
     const { id } = c.req.param();
-    const body = await c.req.json<ScholarshipType>();
+    const body = await c.req.json();
 
-    const parsedDeadline = body.deadline ? new Date(body.deadline) : undefined;
-    if (parsedDeadline && isNaN(parsedDeadline.getTime())) {
-      return sendResponse(c, 400, false, "تاريخ غير صالح");
+    const existingScholarship = await ScholarshipModel.findOne({
+      _id: id,
+      userId: user.id,
+    });
+
+    if (!existingScholarship) {
+      return sendResponse(
+        c,
+        404,
+        false,
+        "المنحة غير موجودة أو لا تملك صلاحية التعديل"
+      );
+    }
+
+    let updateData: any = { ...body };
+
+    if (body.deadline) {
+      const parsedDeadline = new Date(body.deadline);
+      if (isNaN(parsedDeadline.getTime())) {
+        return sendResponse(c, 400, false, "تاريخ الانتهاء غير صالح");
+      }
+      updateData.deadline = parsedDeadline;
+    }
+
+    if (body.resultsDate) {
+      const parsedResultsDate = new Date(body.resultsDate);
+      if (isNaN(parsedResultsDate.getTime())) {
+        return sendResponse(c, 400, false, "تاريخ النتائج غير صالح");
+      }
+      updateData.resultsDate = parsedResultsDate;
+    } else if (body.resultsDate === null) {
+      updateData.resultsDate = undefined;
     }
 
     const updatedScholarship = await ScholarshipModel.findByIdAndUpdate(
       id,
-      {
-        ...body,
-        deadline: parsedDeadline,
-        resultsDate: body.resultsDate ? new Date(body.resultsDate) : undefined,
-      },
-      { new: true }
+      updateData,
+      { new: true, runValidators: true }
     );
-
-    if (!updatedScholarship) {
-      return sendResponse(c, 404, false, "المنحة غير موجودة");
-    }
 
     return sendResponse(
       c,
@@ -174,23 +233,35 @@ export const updateScholarship = async (c: Context) => {
       updatedScholarship
     );
   } catch (err) {
+    console.error("Error in updateScholarship:", err);
     return sendResponse(c, 500, false, "حصل خطأ في السيرفر", undefined, err);
   }
 };
 
 export const deleteScholarship = async (c: Context) => {
   try {
+    const user = c.get("user");
     const { id } = c.req.param();
 
     if (!id) {
       return sendResponse(c, 400, false, "مطلوب رقم تعريف المنحة (id)");
     }
 
-    const deletedScholarship = await ScholarshipModel.findByIdAndDelete(id);
+    const scholarship = await ScholarshipModel.findOne({
+      _id: id,
+      userId: user.id,
+    });
 
-    if (!deletedScholarship) {
-      return sendResponse(c, 404, false, "لم يتم العثور على المنحة");
+    if (!scholarship) {
+      return sendResponse(
+        c,
+        404,
+        false,
+        "لم يتم العثور على المنحة أو لا تملك صلاحية الحذف"
+      );
     }
+
+    const deletedScholarship = await ScholarshipModel.findByIdAndDelete(id);
 
     return sendResponse(
       c,
@@ -200,6 +271,45 @@ export const deleteScholarship = async (c: Context) => {
       deletedScholarship
     );
   } catch (err) {
+    console.error("Error in deleteScholarship:", err);
+    return sendResponse(c, 500, false, "حصل خطأ في السيرفر", undefined, err);
+  }
+};
+
+export const getStatistics = async (c: Context) => {
+  try {
+    const user = c.get("user");
+
+    const statistics = await ScholarshipModel.aggregate([
+      { $match: { userId: user.id } },
+      {
+        $facet: {
+          total: [{ $count: "count" }],
+          byStatus: [{ $group: { _id: "$status", count: { $sum: 1 } } }],
+          byDegree: [{ $group: { _id: "$degreeLevel", count: { $sum: 1 } } }],
+          byCountry: [{ $group: { _id: "$country", count: { $sum: 1 } } }],
+          upcoming: [
+            {
+              $match: {
+                deadline: { $gt: new Date() },
+                status: "لم يتم التقديم",
+              },
+            },
+            { $count: "count" },
+          ],
+        },
+      },
+    ]);
+
+    return sendResponse(
+      c,
+      200,
+      true,
+      "تم جلب الإحصائيات بنجاح",
+      statistics[0] || {}
+    );
+  } catch (err) {
+    console.error("Error in getStatistics:", err);
     return sendResponse(c, 500, false, "حصل خطأ في السيرفر", undefined, err);
   }
 };

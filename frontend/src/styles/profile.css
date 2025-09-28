@@ -1,0 +1,37 @@
+.profile {
+  display: flex;
+  flex-flow: column;
+  gap: 20px;
+  height: 100dvh;
+
+  .container {
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+
+    .top {
+      display: flex;
+      gap: 60px;
+
+      .avatar {
+        border-radius: 12px;
+        height: 300px;
+        max-height: 100%;
+      }
+    }
+    .bottom {
+      flex: 1;
+      display: flex;
+      gap: 20px;
+
+      .right {
+        flex: 2;
+      }
+
+      .options {
+        flex: 1;
+      }
+    }
+  }
+}

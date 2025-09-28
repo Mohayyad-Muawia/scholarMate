@@ -20,6 +20,8 @@ import { useMemo, useState } from "react";
 import calculateDaysLeft from "../utils/calcDaysLeft";
 import { useScholarshipsStore } from "../store/scholarshipsStore";
 import toast from "react-hot-toast";
+import Modal from "./Modal";
+import ActionModal from "./ActionModal";
 
 interface ScholarshipInfoProps {
   scholarship: Scholarship | null;
@@ -33,6 +35,7 @@ export default function ScholarshipInfo({
   onClose,
 }: ScholarshipInfoProps) {
   const [isDeleting, setIsDeleting] = useState(false);
+  const [showModal, setShowModal] = useState(false);
   const { deleteScholarship, isLoading } = useScholarshipsStore();
 
   const country = useMemo(
@@ -40,25 +43,26 @@ export default function ScholarshipInfo({
     [scholarship?.country]
   );
 
-  const handleDelete = async () => {
+  const handleDeleteClick = () => {
+    setShowModal(true);
+  };
+
+  const handleConfirmDelete = async () => {
     if (!scholarship?._id) return;
 
-    // تأكيد الحذف
-    const isConfirmed = window.confirm(
-      "⚠️ هل أنت متأكد من حذف هذه المنحة؟\nهذا الإجراء لا يمكن التراجع عنه."
-    );
-
-    if (!isConfirmed) return;
-
     setIsDeleting(true);
+    setShowModal(false);
 
     try {
       const success = await deleteScholarship(scholarship._id);
 
       if (success) {
+        toast.success("✅ تم حذف المنحة بنجاح");
         if (onClose) {
           setTimeout(() => onClose(), 500);
         }
+      } else {
+        toast.error("❌ فشل في حذف المنحة");
       }
     } catch (error) {
       console.error("Error deleting scholarship:", error);
@@ -66,6 +70,10 @@ export default function ScholarshipInfo({
     } finally {
       setIsDeleting(false);
     }
+  };
+
+  const handleCancelDelete = () => {
+    setShowModal(false);
   };
 
   if (!scholarship) {
@@ -178,7 +186,7 @@ export default function ScholarshipInfo({
             whileHover="hover"
             whileTap="tap"
             variants={hoverEffect}
-            onClick={handleDelete}
+            onClick={handleDeleteClick}
             disabled={isLoading || isDeleting}
           >
             <Trash2 />
@@ -186,6 +194,13 @@ export default function ScholarshipInfo({
           </motion.button>
         </div>
       </div>
+
+      <Modal isOpen={showModal} onClose={handleCancelDelete}>
+        <ActionModal
+          onConfirm={handleConfirmDelete}
+          onCancel={handleCancelDelete}
+        />
+      </Modal>
     </div>
   );
 }

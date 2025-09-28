@@ -5,14 +5,19 @@ import {
   getLatest,
   getNearest,
   getScholarships,
+  getStatistics,
   updateScholarship,
 } from "../controllers/scholarshipController";
+import { authMiddleware } from "../middlewares/authMiddleware";
 
 export const scholarships = new Hono();
+
+scholarships.use("*", authMiddleware);
 
 scholarships.get("/", getScholarships);
 scholarships.get("/nearest", getNearest);
 scholarships.get("/latest", getLatest);
+scholarships.get("/statistics", getStatistics);
 scholarships.post("/add", addScholarship);
 scholarships.patch("/:id", updateScholarship);
 scholarships.delete("/:id", deleteScholarship);

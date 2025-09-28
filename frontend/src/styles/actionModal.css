@@ -1,0 +1,43 @@
+.action-modal {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 350px;
+
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--error);
+    outline: 15px solid var(--error-bg);
+    color: var(--white);
+    margin-top: 25px;
+
+    svg {
+      width: 35px;
+      height: 35px;
+    }
+  }
+
+  h2 {
+    margin-top: 25px;
+  }
+
+  .btns {
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    margin-top: 30px;
+
+    button {
+      flex: 1;
+    }
+    .confirm {
+      background-color: var(--error);
+      color: var(--white);
+    }
+  }
+}
