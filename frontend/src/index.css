@@ -171,3 +171,34 @@ p {
     margin: 20px auto;
   }
 }
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 14px;
+  }
+  label {
+    font-size: 14px;
+  }
+  input,
+  select,
+  textarea {
+    font-size: 14px;
+    padding: 7px 15px;
+  }
+
+  button.primary,
+  a.primary,
+  button.seconday,
+  a.secondary {
+    padding: 7px 15px;
+  }
+}

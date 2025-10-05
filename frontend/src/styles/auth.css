@@ -91,3 +91,37 @@
   height: 70%;
   width: 70%;
 }
+
+@media (max-width: 768px) {
+  .login,
+  .register {
+    .container {
+      padding: 20px 0;
+      width: calc(100% - 40px);
+      height: fit-content;
+      .left {
+        display: none;
+      }
+
+      .right {
+        .title {
+          margin-bottom: 10px;
+          h3 {
+            margin-top: -5px;
+          }
+        }
+        form {
+          width: 85%;
+          gap: 10px;
+
+          .half {
+            width: 100%;
+          }
+        }
+        p {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
