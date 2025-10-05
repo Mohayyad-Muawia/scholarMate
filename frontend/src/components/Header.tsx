@@ -1,11 +1,12 @@
-import { Moon, Plus, Search, Sun } from "lucide-react";
+import { Moon, Plus, Sun } from "lucide-react";
 import "../styles/header.css";
 import useThemeStore from "../store/themeStore";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { hoverEffect } from "../motion/motionVariants";
 import { useState } from "react";
 import Modal from "./Modal";
 import AddForm from "./AddForm";
+import Search from "./Search";
 
 export default function Header({ title }: { title: string }) {
   const { theme, toggleTheme } = useThemeStore();
@@ -16,12 +17,9 @@ export default function Header({ title }: { title: string }) {
         <div className="title">
           <h2>{title}</h2>
         </div>
-        <div className="search">
-          <input type="text" placeholder="ابحث عن شيء ما..." />
-          <a className="search-icon">
-            <Search />
-          </a>
-        </div>
+
+        <Search />
+
         <div className="btns">
           <motion.button
             className="secondary icon"

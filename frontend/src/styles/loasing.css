@@ -1,0 +1,28 @@
+.loading {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  img {
+    width: 100px;
+  }
+  .loader {
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    border: 8px solid var(--primary);
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-radius: 50%;
+    animation: loading 1s ease-in-out infinite;
+  }
+}
+
+@keyframes loading {
+  to {
+    rotate: 360deg;
+  }
+}

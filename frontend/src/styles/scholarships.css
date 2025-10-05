@@ -112,17 +112,6 @@
     color: var(--error);
   }
 
-  .padge {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 6px 24px;
-    border-radius: 20px;
-    font-size: 0.85em;
-    font-weight: 500;
-    width: fit-content;
-  }
-
   .loading,
   .empty {
     display: flex;
@@ -130,7 +119,6 @@
     justify-content: center;
     padding: 40px;
     font-size: 1.1em;
-    margin-top: 20px;
     flex: 1;
   }
 

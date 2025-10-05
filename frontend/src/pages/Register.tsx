@@ -6,6 +6,8 @@ import type { ApiResponse, User } from "../types";
 import useUserStore from "../store/userStore";
 import toast from "react-hot-toast";
 import SelectCountry from "../components/SelectCountry";
+import { motion } from "framer-motion";
+import { hoverEffect } from "../motion/motionVariants";
 
 interface RegisterResponse extends ApiResponse {
   data?: {
@@ -22,7 +24,7 @@ export default function Register() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [cofirmPassword, setConfirmPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [country, setCountry] = useState("");
 
   const [isLoading, setIsLoading] = useState(false);
@@ -90,8 +92,8 @@ export default function Register() {
 
   // check password match
   useEffect(() => {
-    setIsMatched(password === cofirmPassword);
-  }, [password, cofirmPassword]);
+    setIsMatched(password === confirmPassword);
+  }, [password, confirmPassword]);
 
   return (
     <div className="register">
@@ -146,15 +148,23 @@ export default function Register() {
                 id="confirmPassword"
                 placeholder="اعد ادخال كلمة المرور"
                 required
-                value={cofirmPassword}
+                value={confirmPassword}
                 onChange={(e) => {
                   setConfirmPassword(e.target.value);
                 }}
               />
             </div>
-            <button className="primary" type="submit" disabled={isLoading}>
+            <motion.button
+              className="primary"
+              type="submit"
+              disabled={isLoading}
+              initial="rest"
+              whileHover="hover"
+              whileTap="tap"
+              variants={hoverEffect}
+            >
               {isLoading ? "جاري التسجيل..." : "إنشاء حساب"}
-            </button>
+            </motion.button>
           </form>
           <p>
             لديك حساب بالفعل؟ <Link to="/login">تسجيل الدخول</Link>

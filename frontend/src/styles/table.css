@@ -1,0 +1,59 @@
+.scholar-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: right;
+
+  th,
+  td {
+    padding: 10px 12px;
+  }
+  th {
+    border-block: 1px solid var(--gray);
+    transition: 0.3s;
+  }
+  tr {
+    padding: 0 5px;
+    border-right: 4px solid transparent;
+  }
+  tbody {
+    tr:hover {
+      box-shadow: var(--shadow);
+      border-right: 4px solid var(--primary);
+      cursor: pointer;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      height: 15px;
+    }
+  }
+
+  .index {
+    font-weight: bold;
+  }
+  .padge {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 6px 24px;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 14px;
+
+    &.short {
+      padding: 12px;
+      border-radius: 10px;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  .country {
+    span {
+      margin-left: 15px;
+    }
+  }
+}

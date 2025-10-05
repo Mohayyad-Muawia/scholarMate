@@ -280,12 +280,9 @@ export const getStatistics = async (c: Context) => {
   try {
     const user = c.get("user");
 
-    console.log("Fetching statistics for user:", user.id);
-
     const allScholarships = await ScholarshipModel.find({ userId: user.id });
 
     if (allScholarships.length === 0) {
-      console.log("No scholarships found, returning empty statistics");
       return sendResponse(c, 200, true, "لا توجد منح لعرض الإحصائيات", {
         total: [{ count: 0 }],
         byStatus: [],
@@ -340,4 +337,14 @@ export const getStatistics = async (c: Context) => {
     console.error("Error in getStatistics:", err);
     return sendResponse(c, 500, false, "حصل خطأ في السيرفر", undefined, err);
   }
+};
+
+export const search = async (c: Context) => {
+  const user = c.get("user");
+  const query = c.req.query("q");
+  const results = await ScholarshipModel.find({
+    title: { $regex: query, $options: "i" },
+    userId: user.id,
+  });
+  return sendResponse(c, 200, true, "", results);
 };

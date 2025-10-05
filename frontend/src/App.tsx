@@ -11,11 +11,18 @@ import Help from "./pages/Help";
 import ProtectedRoute from "./components/ProtectedRoute";
 import useThemeStore from "./store/themeStore";
 import { useEffect } from "react";
+import NotFound from "./components/NotFound";
 
 function AppContent() {
   const location = useLocation();
-  const hideSidebarRoutes = ["/login", "/register"];
-  const showSidebar = !hideSidebarRoutes.includes(location.pathname);
+  const hideSidebarRoutes = [
+    "/profile",
+    "/",
+    "/scholarships",
+    "/about",
+    "/help",
+  ];
+  const showSidebar = hideSidebarRoutes.includes(location.pathname);
 
   // handle theme change
   const { theme } = useThemeStore();
@@ -53,6 +60,7 @@ function AppContent() {
           element={<ProtectedRoute children={<About />} />}
         />
         <Route path="/help" element={<ProtectedRoute children={<Help />} />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );

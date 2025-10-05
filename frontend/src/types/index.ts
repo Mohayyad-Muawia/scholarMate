@@ -21,13 +21,16 @@ export type Scholarship = {
     | "تم قبول الطلب";
   link: string;
   createdAt?: Date;
+  updatedAt?: Date;
 };
 
 export type User = {
+  _id?: string;
   name: string;
   country: string;
   email: string;
-  password: string;
+  createdAt?: Date;
+  updatedAt?: Date;
 };
 
 export interface StatisticsData {

@@ -1,0 +1,28 @@
+.help {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+
+  .contact-form {
+    form {
+      display: flex;
+      flex-flow: column;
+      gap: 20px;
+      margin-top: 20px;
+      width: 450px;
+      font-size: 18px;
+
+      > div {
+        display: flex;
+        flex-flow: column;
+        gap: 10px;
+      }
+    }
+    textarea {
+      max-width: 100%;
+      min-width: 100%;
+      min-height: 130px;
+    }
+  }
+}

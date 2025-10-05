@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import SelectCountry from "./SelectCountry";
 import "../styles/addForm.css";
-import toast from "react-hot-toast";
 import type { Scholarship } from "../types/index";
 import { useScholarshipsStore } from "../store/scholarshipsStore";
+import { hoverEffect } from "../motion/motionVariants";
+import { motion } from "framer-motion";
 
 const text = {
   title: {
@@ -301,10 +302,26 @@ export default function AddForm({ close, scholarshipToEdit }: AddFormProps) {
         </div>
 
         <div className="btns">
-          <button type="button" className="secondary" onClick={close}>
+          <motion.button
+            type="button"
+            className="secondary"
+            onClick={close}
+            initial="rest"
+            whileHover="hover"
+            whileTap="tap"
+            variants={hoverEffect}
+          >
             اغلاق
-          </button>
-          <button type="submit" className="primary" disabled={isLoading}>
+          </motion.button>
+          <motion.button
+            type="submit"
+            className="primary"
+            disabled={isLoading}
+            initial="rest"
+            whileHover="hover"
+            whileTap="tap"
+            variants={hoverEffect}
+          >
             {isLoading
               ? isEditing
                 ? "جاري التعديل"
@@ -312,7 +329,7 @@ export default function AddForm({ close, scholarshipToEdit }: AddFormProps) {
               : isEditing
               ? "تعديل المنحة"
               : "اضافة المنحة"}
-          </button>
+          </motion.button>
         </div>
       </form>
     </div>

@@ -5,6 +5,8 @@ import axios from "axios";
 import type { ApiResponse, User } from "../types";
 import useUserStore from "../store/userStore";
 import toast from "react-hot-toast";
+import { motion } from "framer-motion";
+import { hoverEffect } from "../motion/motionVariants";
 
 interface RegisterResponse extends ApiResponse {
   data?: {
@@ -84,9 +86,17 @@ export default function Login() {
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
-            <button className="primary" type="submit" disabled={isLoading}>
+            <motion.button
+              className="primary"
+              type="submit"
+              disabled={isLoading}
+              initial="rest"
+              whileHover="hover"
+              whileTap="tap"
+              variants={hoverEffect}
+            >
               {isLoading ? "جاري تسجيل الدخول..." : "تسجيل الدخول"}
-            </button>
+            </motion.button>
           </form>
           <p>
             ليس لديك حساب؟ <Link to="/register">إنشاء حساب</Link>

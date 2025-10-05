@@ -38,7 +38,7 @@ export const useScholarshipsStore = create<ScholarshipsState>((set, get) => ({
   statistics: null,
 
   page: 1,
-  limit: 10,
+  limit: 11,
   total: 0,
   totalPages: 0,
 

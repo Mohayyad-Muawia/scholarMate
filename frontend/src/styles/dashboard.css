@@ -22,6 +22,7 @@
   .c8 {
     grid-column: 9/16;
     grid-row: 3/9;
+    overflow: hidden;
   }
 }
 
@@ -115,4 +116,23 @@
 .stat4 {
   grid-column: 10/13;
   grid-row: 2/3;
+}
+
+.chart {
+  display: flex;
+  flex-flow: column;
+
+  .custom-tooltip {
+    background: var(--secondary);
+    box-shadow: var(--shadow);
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 1px solid var(--gray);
+
+    .label {
+      color: var(--text);
+      font-weight: 600;
+      margin: 0;
+    }
+  }
 }

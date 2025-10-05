@@ -1,5 +1,8 @@
 import { Trash2 } from "lucide-react";
 import "../styles/actionModal.css";
+import { motion } from "framer-motion";
+import { hoverEffect } from "../motion/motionVariants";
+
 interface ActionModalProps {
   onConfirm: () => void;
   onCancel: () => void;
@@ -28,13 +31,29 @@ export default function ActionModal({
       <p>{message}</p>
 
       <div className="btns">
-        <button className="cancel secondary" onClick={onCancel} type="button">
+        <motion.button
+          className="cancel secondary"
+          onClick={onCancel}
+          type="button"
+          initial="rest"
+          whileHover="hover"
+          whileTap="tap"
+          variants={hoverEffect}
+        >
           {cancelText}
-        </button>
+        </motion.button>
 
-        <button className="confirm primary" onClick={onConfirm} type="button">
+        <motion.button
+          className="confirm primary"
+          onClick={onConfirm}
+          type="button"
+          initial="rest"
+          whileHover="hover"
+          whileTap="tap"
+          variants={hoverEffect}
+        >
           {confirmText}
-        </button>
+        </motion.button>
       </div>
     </div>
   );

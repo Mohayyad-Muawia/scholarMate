@@ -1,4 +1,5 @@
-const formatDate = (date: Date) => {
+const formatDate = (date: Date | undefined) => {
+  if (!date) return "غير محدد";
   const formattedDate = new Intl.DateTimeFormat("ar-EG", {
     year: "numeric",
     month: "long",

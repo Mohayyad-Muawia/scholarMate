@@ -5,42 +5,7 @@ header {
   width: 100%;
   padding: 5px;
 
-  .search {
-    position: relative;
-    width: 40%;
-    height: 50px;
-    background-color: var(--secondary);
-    box-shadow: var(--shadow);
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-
-    input {
-      border: none;
-      outline: none;
-      width: 100%;
-      height: 100%;
-      font-size: 17px;
-      padding-left: 20px;
-      padding-right: 20px;
-      background: transparent;
-      color: var(--text);
-    }
-
-    .search-icon {
-      position: absolute;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-      width: 50px;
-      left: 0;
-      cursor: pointer;
-      color: var(--text);
-    }
-  }
-
-  .btns {
+  > .btns {
     display: flex;
     align-items: center;
     gap: 15px;

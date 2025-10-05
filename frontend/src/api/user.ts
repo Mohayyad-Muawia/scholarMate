@@ -1,8 +1,7 @@
 import axios from "axios";
-import type { Scholarship } from "../types";
 
 const API_URL =
-  (import.meta.env.VITE_API_URL || "http://localhost:3000") + "/scholarships";
+  (import.meta.env.VITE_API_URL || "http://localhost:3000") + "/user";
 const api = axios.create({ baseURL: API_URL });
 
 api.interceptors.request.use(
@@ -41,53 +40,28 @@ const handleApiError = (error: any) => {
   }
 };
 
-export async function fetchScholarships(page = 1, limit = 10) {
+export async function updateUser(
+  id: string,
+  user: { name: string; email: string; country: string }
+) {
   try {
-    const res = await api.get("", { params: { page, limit } });
+    const res = await api.patch(`/${id}`, user);
     return res.data;
   } catch (error) {
     return handleApiError(error);
   }
 }
 
-export async function fetchNearest(limit = 5) {
+export async function fetchUser(id: string) {
   try {
-    const res = await api.get(`/nearest?limit=${limit}`);
+    const res = await api.get(`/${id}`);
     return res.data;
   } catch (error) {
     return handleApiError(error);
   }
 }
 
-export async function fetchResults(q: string) {
-  if (!q) return [];
-  try {
-    const res = await api.get(`/search?q=${q}`);
-    return res.data;
-  } catch (error) {
-    return handleApiError(error);
-  }
-}
-
-export async function addScholarship(sch: Scholarship) {
-  try {
-    const res = await api.post("/add", sch);
-    return res.data;
-  } catch (error) {
-    return handleApiError(error);
-  }
-}
-
-export async function updateScholarship(id: string, sch: Scholarship) {
-  try {
-    const res = await api.patch(`/${id}`, sch);
-    return res.data;
-  } catch (error) {
-    return handleApiError(error);
-  }
-}
-
-export async function deleteScholarship(id: string) {
+export async function deleteUser(id: string) {
   try {
     const res = await api.delete(`/${id}`);
     return res.data;
@@ -96,9 +70,24 @@ export async function deleteScholarship(id: string) {
   }
 }
 
-export async function getStatistics() {
+export async function resetPassword(
+  id: string,
+  passwords: { currPassword: string; newPassword: string }
+) {
   try {
-    const res = await api.get("/statistics");
+    const res = await api.patch(`/pass/${id}`, passwords);
+    return res.data;
+  } catch (error) {
+    return handleApiError(error);
+  }
+}
+export async function sendReport(report: {
+  name: string;
+  email: string;
+  message: string;
+}) {
+  try {
+    const res = await api.post("/report", report);
     return res.data;
   } catch (error) {
     return handleApiError(error);

@@ -1,11 +1,4 @@
-import {
-  Hourglass,
-  TextSearch,
-  ThumbsDown,
-  ThumbsUp,
-  ChevronLeft,
-  ChevronRight,
-} from "lucide-react";
+import { Hourglass, TextSearch, ThumbsDown, ThumbsUp } from "lucide-react";
 import type { Scholarship } from "../types";
 
 const getPadge = (status: Scholarship["status"]) => {

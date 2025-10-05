@@ -5,6 +5,7 @@ import { logger } from "hono/logger";
 import { cors } from "hono/cors";
 import "dotenv/config";
 import { scholarships } from "./routes/scholarshipRoutes";
+import { user } from "./routes/userRoutes";
 
 const app = new Hono();
 
@@ -18,6 +19,7 @@ app.get("/", (c) => {
 });
 
 app.route("/auth", auth);
+app.route("/user", user);
 app.route("/scholarships", scholarships);
 
 // Connect to MongoDB

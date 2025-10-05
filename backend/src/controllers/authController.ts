@@ -40,7 +40,7 @@ export const register = async (c: Context) => {
     return sendResponse(c, 201, true, "تم إنشاء الحساب بنجاح", {
       token,
       user: {
-        id: savedUser._id.toString(),
+        _id: savedUser._id.toString(),
         name: savedUser.name,
         country: savedUser.country,
         email: savedUser.email,
@@ -90,7 +90,7 @@ export const login = async (c: Context) => {
     return sendResponse(c, 200, true, "تم تسجيل الدخول بنجاح", {
       token,
       user: {
-        id: user._id.toString(),
+        _id: user._id.toString(),
         name: user.name,
         country: user.country,
         email: user.email,
