@@ -52,6 +52,7 @@
   border: none;
   transition: background 0.3s, color 0.3s;
   font-family: "Cairo", sans-serif;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -188,6 +189,9 @@ p {
   label {
     font-size: 14px;
   }
+  .hide-in-mobile {
+    display: none !important;
+  }
   input,
   select,
   textarea {
@@ -200,5 +204,10 @@ p {
   button.seconday,
   a.secondary {
     padding: 7px 15px;
+  }
+
+  .page {
+    margin-right: 0; /* To accommodate the sidebar */
+    padding: 15px;
   }
 }

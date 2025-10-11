@@ -26,3 +26,15 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .help {
+    height: 100dvh;
+    padding-bottom: 70px;
+    .contact-form {
+      form {
+        width: 80vw;
+      }
+    }
+  }
+}

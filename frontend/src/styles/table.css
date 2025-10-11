@@ -57,3 +57,24 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .scholar-table {
+    th,
+    td {
+      padding: 8px 10px;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .padge {
+      padding: 8px;
+      border-radius: 8px;
+
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+}

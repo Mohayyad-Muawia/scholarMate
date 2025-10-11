@@ -163,7 +163,7 @@ export default function ScholarshipInfo({
           variants={hoverEffect}
         >
           <ExternalLink />
-          زيارة موقع المنحة
+          زيارة الموقع
         </motion.a>
 
         <div className="action-btns">
@@ -177,7 +177,9 @@ export default function ScholarshipInfo({
             disabled={isLoading || isDeleting}
           >
             <Pencil />
-            {isLoading ? "جاري التحميل..." : "تعديل البيانات"}
+            <span className="hide-in-mobile">
+              {isLoading ? "جاري التحميل..." : "تعديل البيانات"}
+            </span>
           </motion.button>
 
           <motion.button
@@ -190,7 +192,9 @@ export default function ScholarshipInfo({
             disabled={isLoading || isDeleting}
           >
             <Trash2 />
-            {isDeleting ? "جاري الحذف..." : "حذف المنحة"}
+            <span className="hide-in-mobile">
+              {isDeleting ? "جاري الحذف..." : "حذف المنحة"}
+            </span>
           </motion.button>
         </div>
       </div>

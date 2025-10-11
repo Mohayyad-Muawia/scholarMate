@@ -1,0 +1,29 @@
+.mobile-nav {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  background-color: var(--secondary);
+  box-shadow: var(--shadow);
+
+  .link {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.active {
+      background-color: var(--primary);
+      color: var(--secondary);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-nav {
+    display: flex;
+  }
+}

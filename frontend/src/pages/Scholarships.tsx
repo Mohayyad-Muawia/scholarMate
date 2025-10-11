@@ -43,7 +43,7 @@ export default function Scholarships() {
               className="pagination-btn"
             >
               <ChevronRight size={18} />
-              السابق
+              <span className="hide-in-mobile"> السابق</span>
             </button>
 
             <div className="page-numbers">
@@ -68,7 +68,7 @@ export default function Scholarships() {
               disabled={currentPage === totalPages || isLoading}
               className="pagination-btn"
             >
-              التالي
+              <span className="hide-in-mobile">التالي </span>
               <ChevronLeft size={18} />
             </button>
           </div>

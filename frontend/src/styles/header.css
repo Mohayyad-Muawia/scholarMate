@@ -11,3 +11,22 @@ header {
     gap: 15px;
   }
 }
+
+@media (max-width: 768px) {
+  header {
+    padding: 0;
+    margin-bottom: 15px;
+    .btns {
+      gap: 10px;
+
+      button {
+        padding: 10px;
+
+        svg {
+          width: 22px;
+          height: 22px;
+        }
+      }
+    }
+  }
+}

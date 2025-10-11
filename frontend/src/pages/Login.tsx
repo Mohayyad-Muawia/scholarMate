@@ -23,12 +23,13 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
+  const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
     try {
       const response: RegisterResponse = (
-        await axios.post("http://localhost:3000/auth/login", {
+        await axios.post(`${API_URL}/auth/login`, {
           email,
           password,
         })

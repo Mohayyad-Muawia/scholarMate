@@ -175,3 +175,78 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .about.page {
+    height: auto;
+    padding-bottom: 80px;
+
+    .container {
+      display: flex;
+      flex-flow: column;
+
+      .c1 {
+        gap: 20px;
+      }
+
+      .c2 {
+        gap: 20px;
+        .techs {
+          flex-wrap: wrap;
+          justify-content: center;
+
+          .card {
+            width: 200px;
+            flex: 0 1 auto;
+          }
+        }
+      }
+
+      .c6 {
+        order: 5;
+        .card {
+          width: 100%;
+          padding: 20px;
+
+          .icon {
+            width: 50px;
+            height: 50px;
+
+            svg {
+              width: 25px;
+              height: 25px;
+            }
+          }
+        }
+      }
+
+      .c7 {
+        order: 7;
+        .text {
+          width: 100%;
+          gap: 5px;
+          .btns {
+            margin-top: 20px;
+
+            a {
+              font-size: 12px;
+              padding: 6px;
+              width: 100%;
+              svg {
+                width: 16px;
+              }
+            }
+          }
+
+          svg {
+            width: 22px;
+          }
+        }
+
+        img {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -2,7 +2,9 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  height: 100dvh;
+  min-height: 100dvh;
+  padding: 20px;
+  box-sizing: border-box;
 
   .container {
     display: grid;
@@ -31,8 +33,10 @@
   grid-row: 1/2;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   overflow: hidden;
   padding: 30px 40px;
+
   .image {
     align-self: flex-end;
     margin-bottom: -41px;
@@ -43,14 +47,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    flex: 1;
   }
 
   img {
     height: 200px;
+    max-width: 100%;
+    object-fit: contain;
   }
+
   span {
     color: var(--primary);
   }
+
   p {
     margin-top: 10px;
     font-size: 18px;
@@ -64,8 +73,9 @@
 .stat4 {
   display: flex;
   align-items: center;
-  padding-right: 25px;
-  gap: 30px;
+  padding: 20px;
+  gap: 20px;
+  border-radius: 12px;
 
   .icon {
     width: 60px;
@@ -74,18 +84,22 @@
     align-items: center;
     justify-content: center;
     border-radius: 12px;
+    flex-shrink: 0;
   }
 
   .text {
     display: flex;
-    flex-flow: column;
+    flex-direction: column;
     justify-content: center;
-    /* padding-top: 5px; */
+    flex: 1;
   }
+
   h2 {
     line-height: 30px;
     direction: ltr;
     text-align: end;
+    margin: 0;
+    font-size: 24px;
 
     span {
       font-size: 13px;
@@ -93,11 +107,15 @@
       color: var(--text);
     }
   }
+
   p {
     font-weight: bold;
     opacity: 0.7;
+    margin: 0;
+    font-size: 14px;
   }
 }
+
 .stat1 {
   grid-column: 1/4;
   grid-row: 2/3;
@@ -120,7 +138,8 @@
 
 .chart {
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
+  height: 100%;
 
   .custom-tooltip {
     background: var(--secondary);
@@ -134,5 +153,99 @@
       font-weight: 600;
       margin: 0;
     }
+  }
+}
+
+/* === تحسينات للـ Mobile === */
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 15px;
+    gap: 0;
+
+    .container {
+      gap: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      padding-top: 10px;
+      padding-bottom: 65px;
+    }
+  }
+
+  .greeting {
+    display: none;
+  }
+
+  .c2 {
+    order: 2;
+    width: 100%;
+  }
+
+  .c8 {
+    grid-column: 1;
+    grid-row: 8;
+    order: 8;
+    min-height: 300px;
+  }
+
+  .stat1,
+  .stat2,
+  .stat3,
+  .stat4 {
+    grid-column: 1 !important;
+    padding: 15px 10px;
+    gap: 12px;
+    min-height: 80px;
+    width: calc(50% - 5px);
+
+    .icon {
+      width: 45px;
+      height: 45px;
+    }
+
+    h2 {
+      font-size: 18px;
+      text-align: right;
+    }
+
+    p {
+      font-size: 10px;
+    }
+  }
+
+  .stat1 {
+    order: 3;
+  }
+
+  .stat2 {
+    grid-row: 4;
+    order: 4;
+  }
+
+  .stat3 {
+    grid-row: 5;
+    order: 5;
+  }
+
+  .stat4 {
+    grid-row: 6;
+    order: 6;
+  }
+
+  /* إخفاء بعض العناصر إذا لزم الأمر */
+  .calendar {
+    order: 7;
+    max-width: 100%;
+  }
+
+  .closest-deadlines {
+    width: 100%;
+    order: 8;
+    overflow: scroll;
+  }
+
+  .chart {
+    width: 100%;
+    height: 200px;
+    order: 7;
   }
 }

@@ -183,7 +183,7 @@ export default function AddForm({ close, scholarshipToEdit }: AddFormProps) {
     <div className="addForm">
       <h2>{isEditing ? "تعديل المنحة" : "اضافة منحة جديدة"}</h2>
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className="mobile-full">
           <label htmlFor="title">{text.title.label}</label>
           <input
             type="text"
@@ -277,7 +277,7 @@ export default function AddForm({ close, scholarshipToEdit }: AddFormProps) {
           </select>
         </div>
 
-        <div>
+        <div className="mobile-full">
           <label htmlFor="link">{text.link.label}</label>
           <input
             type="url"

@@ -219,7 +219,7 @@ export default function About() {
 
             <div className="btns">
               <motion.a
-                href="mailto:moayyad2.0@gmail.com"
+                href="mailto:mohayyad2.0@gmail.com"
                 target="blank"
                 className="primary"
                 initial="rest"

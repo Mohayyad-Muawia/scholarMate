@@ -8,7 +8,7 @@ import toast from "react-hot-toast";
 import ScholarTable from "./ScholarTable";
 import Loading from "./Loading";
 
-export default function Search() {
+export default function Search({ myClass }: { myClass?: string }) {
   const [isFocused, setIsFocused] = useState(false);
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<Scholarship[]>([]);
@@ -48,7 +48,7 @@ export default function Search() {
   };
 
   return (
-    <div className="search-box" onBlur={handleBlur}>
+    <div className={`search-box ${myClass}`} onBlur={handleBlur}>
       <div className={isFocused ? "search focus" : "search"}>
         <input
           type="text"

@@ -76,9 +76,15 @@ export default function ScholarTable({
           <thead>
             <tr>
               {indexed && <th>#</th>}
-              {selectedProps.map((prop) => (
-                <th key={prop}>{allowedColumns[prop]}</th>
-              ))}
+              {selectedProps.map((prop) => {
+                return prop === "daysLeft" ? (
+                  <th className="hide-in-mobile" key={prop}>
+                    {allowedColumns[prop]}
+                  </th>
+                ) : (
+                  <th key={prop}>{allowedColumns[prop]}</th>
+                );
+              })}
             </tr>
           </thead>
           <tbody>
@@ -105,7 +111,9 @@ export default function ScholarTable({
                 {selectedProps.map((prop) => {
                   if (prop === "daysLeft") {
                     return (
-                      <td key={prop}>{calculateDaysLeft(sclr.deadline)}</td>
+                      <td className="hide-in-mobile" key={prop}>
+                        {calculateDaysLeft(sclr.deadline)}
+                      </td>
                     );
                   }
                   if (prop === "country") {
@@ -137,7 +145,11 @@ export default function ScholarTable({
                           }}
                         >
                           {padge.icon}
-                          {!shortStatus && <span>{sclr.status}</span>}
+                          {!shortStatus && (
+                            <span className="hide-in-mobile">
+                              {sclr.status}
+                            </span>
+                          )}
                         </div>
                       </td>
                     );

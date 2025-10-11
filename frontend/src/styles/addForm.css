@@ -27,3 +27,33 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .addForm {
+    width: 100vw;
+    height: calc(100dvh - 40px);
+    padding: 0 20px;
+    form {
+      gap: 20px;
+      > div {
+        width: calc(50% - 10px);
+
+        input,
+        select,
+        label {
+          font-size: 12px !important;
+        }
+      }
+      .mobile-full {
+        width: 100% !important;
+      }
+      .btns {
+        width: 100%;
+        button {
+          font-size: 12px !important;
+          flex: 1;
+        }
+      }
+    }
+  }
+}

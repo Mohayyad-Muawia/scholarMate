@@ -181,4 +181,102 @@
       }
     }
   }
+
+  .action-modal {
+    .btns {
+      /* gap: 20px; */
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .profile {
+    header {
+      margin-bottom: 0;
+    }
+    .container {
+      padding-bottom: 80px;
+      .top {
+        flex-flow: column;
+        align-items: center;
+        padding-left: 20px;
+        gap: 20px;
+
+        .avatar {
+          width: 100%;
+          flex: 1;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        h1 {
+          font-size: 20px;
+        }
+      }
+    }
+    .info {
+      width: 100%;
+    }
+
+    .progress-bar {
+      margin-top: 20px;
+      width: 90%;
+
+      .bar {
+        height: 15px;
+        font-size: 11px;
+      }
+
+      .info {
+        top: -25px;
+        text-align: end;
+      }
+    }
+
+    .bottom {
+      flex-flow: column;
+      .details {
+        .item {
+          p,
+          h3 {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    .numbers {
+      margin-top: 20px;
+      flex-flow: column;
+      align-items: flex-start;
+      gap: 10px;
+      .item {
+        .icon {
+          height: 60px;
+          width: 60px;
+          svg {
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+    }
+    .pass-form,
+    .info-form {
+      form {
+        min-width: auto;
+        width: 70vw;
+      }
+
+      .btns {
+        width: 100%;
+        button {
+          flex: 1;
+          font-size: 12px;
+        }
+      }
+    }
+  }
 }

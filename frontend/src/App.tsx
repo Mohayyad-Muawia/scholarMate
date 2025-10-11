@@ -12,6 +12,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import useThemeStore from "./store/themeStore";
 import { useEffect } from "react";
 import NotFound from "./components/NotFound";
+import MobileNav from "./components/MobileNav";
 
 function AppContent() {
   const location = useLocation();
@@ -43,6 +44,7 @@ function AppContent() {
         }}
       />
       {showSidebar && <Sidebar />}
+      {showSidebar && <MobileNav />}
       <Routes>
         <Route path="/" element={<ProtectedRoute children={<Dashboard />} />} />
         <Route path="/register" element={<Register />} />

@@ -2,7 +2,6 @@
   height: 100dvh;
   display: flex;
   flex-flow: column;
-  /* overflow: hidden; */
 
   .pagination-box {
     display: flex;
@@ -28,8 +27,8 @@
         align-items: center;
         gap: 8px;
         padding: 8px 20px;
-        border: 1px solid var(--gray);
         background: var(--secondary);
+        border: 1px solid var(--gray);
         color: var(--text);
         border-radius: 6px;
         cursor: pointer;
@@ -140,6 +139,41 @@
 
     .page-numbers {
       order: -1;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .scholarships.page {
+    padding-bottom: 80px;
+    height: auto;
+
+    .pagination-box {
+      padding: 15px;
+
+      .pagination-controls {
+        flex-flow: row;
+
+        .pagination-btn {
+          padding: 6px;
+          gap: 6px;
+          font-size: 14px;
+        }
+
+        .page-btn {
+          display: none;
+        }
+      }
+      p {
+        font-size: 12px;
+      }
+      span {
+        display: none;
+      }
+    }
+
+    .table-container {
+      overflow-x: scroll;
     }
   }
 }

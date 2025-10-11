@@ -26,11 +26,15 @@
     margin-top: 25px;
   }
 
+  p {
+    text-align: center;
+  }
   .btns {
     display: flex;
     flex-flow: row;
     width: 100%;
     margin-top: 30px;
+    gap: 20px;
 
     button {
       flex: 1;
@@ -39,5 +43,11 @@
       background-color: var(--error);
       color: var(--white);
     }
+  }
+}
+
+@media (max-width: 400px) {
+  .action-modal {
+    width: 70vw;
   }
 }

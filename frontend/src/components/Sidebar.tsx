@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import useUserStore from "../store/userStore";
 export default function Sidebar() {
-  const {logout} = useUserStore();
+  const { logout } = useUserStore();
   const links = [
     { to: "/", label: "لوحة التحكم", icon: <LayoutGrid />, active: true },
     {
@@ -30,7 +30,7 @@ export default function Sidebar() {
   ];
 
   return (
-    <div className="sidebar">
+    <div className="sidebar hide-in-mobile">
       <div className="top">
         <img src="/images/logo-word.png" alt="Logo" height={55} />
       </div>

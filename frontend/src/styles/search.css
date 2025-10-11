@@ -79,3 +79,10 @@
     background-color: #7664e425;
   }
 }
+
+.mobile-search {
+  .search-box {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
