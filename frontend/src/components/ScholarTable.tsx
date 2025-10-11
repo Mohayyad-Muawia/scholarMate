@@ -11,6 +11,7 @@ import AddForm from "./AddForm";
 import { useCallback, useState } from "react";
 import "../styles/table.css";
 import Loading from "./Loading";
+import Empty from "./Empty";
 
 type Props = {
   scholarships: Scholarship[];
@@ -64,12 +65,12 @@ export default function ScholarTable({
   return (
     <>
       {isLoading ? (
-        <div className="loading" aria-live="polite">
+        <div className="state" aria-live="polite">
           <Loading />
         </div>
       ) : scholarships.length === 0 ? (
-        <div className="no-data" aria-live="polite">
-          لا توجد منح متاحة
+        <div className="state" aria-live="polite">
+          <Empty />
         </div>
       ) : (
         <table className="scholar-table">
@@ -163,7 +164,6 @@ export default function ScholarTable({
         </table>
       )}
 
-      {/* Modals remain the same */}
       <Modal
         isOpen={!!currentScholarship}
         onClose={() => setCurrentScholarship(null)}

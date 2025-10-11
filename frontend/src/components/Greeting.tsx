@@ -36,7 +36,10 @@ export default function Greeting() {
     <div className="greeting card">
       <div className="text">
         <h1>
-          {getGreeting()}، <span>{user.name}</span>
+          {getGreeting()}،{" "}
+          <span>
+            {user.name.split(" ")[0]} {user.name.split(" ")[1]}
+          </span>
         </h1>
         <p className="quote">{quotes[randomNumber - 1]}</p>
       </div>

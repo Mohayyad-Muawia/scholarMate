@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { useScholarshipsStore } from "../store/scholarshipsStore";
 import ScholarTable from "./ScholarTable";
 import Loading from "./Loading";
+import Empty from "./Empty";
 
 export default function ClosestDeadlines() {
   const { upcomingScholarships, fetchUpcoming, isLoading } =
@@ -25,7 +26,7 @@ export default function ClosestDeadlines() {
     <div className="closest-deadlines card">
       <h3>اقرب التواريخ النهائية</h3>
       {upcomingScholarships.length === 0 ? (
-        <p>لا توجد منح حالياً</p>
+        <Empty />
       ) : (
         <ScholarTable
           scholarships={upcomingScholarships}

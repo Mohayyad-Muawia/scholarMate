@@ -11,6 +11,7 @@ import type { CountryStat } from "../types";
 import getCountry from "../utils/getCountry";
 import Loading from "./Loading";
 import { useEffect, useState } from "react";
+import Empty from "./Empty";
 
 const CustomTooltip = ({ active, payload, label }: any) => {
   if (active && payload && payload.length) {
@@ -74,32 +75,39 @@ export default function CountriesChart() {
   return (
     <div className="c8 card chart">
       <h3>عدد المنح حسب الدولة</h3>
-      <ResponsiveContainer width="100%" height="100%">
-        <BarChart data={data} margin={chartMargin}>
-          <XAxis
-            dataKey="_id"
-            interval={0}
-            tickMargin={5}
-            tick={{
-              fontSize,
-              fontWeight: "bold",
-            }}
-          />
-          <YAxis
-            allowDecimals={false}
-            tickMargin={10}
-            tick={{ fontSize, fontWeight: "bold" }}
-          />
-          <Tooltip content={<CustomTooltip />} cursor={{ fill: "#7664e410" }} />
-          <Bar
-            dataKey="count"
-            className="bar-hover"
-            fill="#7664e4"
-            barSize={barSize}
-            radius={[6, 6, 0, 0]}
-          />
-        </BarChart>
-      </ResponsiveContainer>
+      {data.length === 0 ? (
+        <Empty />
+      ) : (
+        <ResponsiveContainer width="100%" height="100%">
+          <BarChart data={data} margin={chartMargin}>
+            <XAxis
+              dataKey="_id"
+              interval={0}
+              tickMargin={5}
+              tick={{
+                fontSize,
+                fontWeight: "bold",
+              }}
+            />
+            <YAxis
+              allowDecimals={false}
+              tickMargin={10}
+              tick={{ fontSize, fontWeight: "bold" }}
+            />
+            <Tooltip
+              content={<CustomTooltip />}
+              cursor={{ fill: "#7664e410" }}
+            />
+            <Bar
+              dataKey="count"
+              className="bar-hover"
+              fill="#7664e4"
+              barSize={barSize}
+              radius={[6, 6, 0, 0]}
+            />
+          </BarChart>
+        </ResponsiveContainer>
+      )}
     </div>
   );
 }

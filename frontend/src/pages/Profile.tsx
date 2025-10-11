@@ -123,10 +123,11 @@ export default function Profile() {
     {
       icon: <Award />,
       label: "الدرجة الاكثر تكرارا",
-      value:
-        statistics?.byDegree?.reduce((prev, curr) =>
-          curr.count > prev.count ? curr : prev
-        )?._id || "لا توجد",
+      value: statistics?.byDegree?.length
+        ? statistics.byDegree.reduce((prev, curr) =>
+            curr.count > prev.count ? curr : prev
+          )._id
+        : "لا توجد",
     },
     {
       icon: <TrendingUp />,

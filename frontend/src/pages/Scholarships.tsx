@@ -75,7 +75,7 @@ export default function Scholarships() {
         )}
 
         <span>
-          الصفحة {currentPage} من {totalPages}
+          الصفحة {currentPage} من {totalPages ? totalPages : 1}
         </span>
       </div>
       <div className="table-container card">

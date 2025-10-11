@@ -139,6 +139,7 @@
 .chart {
   display: flex;
   flex-direction: column;
+  gap: 30px;
   height: 100%;
 
   .custom-tooltip {
