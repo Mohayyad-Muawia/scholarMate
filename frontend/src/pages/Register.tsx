@@ -124,6 +124,7 @@ export default function Register() {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                inputMode="email"
               />
             </div>
             <div className="optional">

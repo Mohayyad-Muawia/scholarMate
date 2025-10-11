@@ -16,7 +16,6 @@ export default function InfoForm({ close }: props) {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log(user);
 
     if (!user?._id) {
       return;

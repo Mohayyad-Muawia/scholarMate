@@ -19,7 +19,6 @@ api.interceptors.request.use(
 );
 
 const handleApiError = (error: any) => {
-  console.log(error);
   if (error.response) {
     return {
       success: false,

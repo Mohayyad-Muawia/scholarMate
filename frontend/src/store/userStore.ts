@@ -43,7 +43,6 @@ const useUserStore = create<UserState>((set) => ({
   },
   fetchUser: async (id) => {
     set({ isLoading: true, error: null });
-    console.log("test 2");
 
     try {
       const res = await api.fetchUser(id);

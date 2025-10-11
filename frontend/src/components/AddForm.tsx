@@ -13,7 +13,7 @@ const text = {
   },
   description: {
     label: "وصف المنحة",
-    placeholder: "ادخل وصف المنحة",
+    placeholder: "ادخل نبذة قصيرة عن المنحة (اقصى حد 50 حرف)",
   },
   country: {
     label: "الدولة",
@@ -157,8 +157,6 @@ export default function AddForm({ close, scholarshipToEdit }: AddFormProps) {
       country: formData.country || undefined,
     };
 
-    console.log(scholarshipToEdit);
-
     if (isEditing && scholarshipToEdit?._id) {
       // update form
       const success = await updateScholarship(
@@ -298,6 +296,7 @@ export default function AddForm({ close, scholarshipToEdit }: AddFormProps) {
             value={formData.description}
             onChange={handleChange}
             required
+            maxLength={50}
           />
         </div>
 
