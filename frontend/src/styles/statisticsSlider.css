@@ -31,6 +31,7 @@
       align-items: center;
       justify-content: center;
       cursor: pointer;
+      transition: 0.3s;
     }
     .indicator {
       font-size: 14px;
@@ -49,7 +50,6 @@
       flex-flow: column;
       gap: 20px;
       width: 100%;
-      /* transition: all 0.3s ease; */
 
       .info {
         flex: 1;
@@ -60,7 +60,6 @@
       }
 
       .description {
-        /* min-height: 100px; */
         margin: 7px;
         padding: 0 15px 0 10px;
         border-right: 4px solid var(--color);

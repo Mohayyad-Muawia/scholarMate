@@ -34,7 +34,7 @@ export default function Header({ title }: { title: string }) {
             {theme === "light" ? <Moon /> : <Sun />}
           </motion.button>
           <motion.button
-            className="secondary icon"
+            className="secondary icon hide-in-desktop"
             initial="rest"
             whileHover="hover"
             whileTap="tap"

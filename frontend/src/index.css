@@ -173,6 +173,10 @@ p {
   }
 }
 
+.hide-in-desktop {
+  display: none !important;
+}
+
 @media (max-width: 768px) {
   h1 {
     font-size: 24px;
@@ -191,6 +195,9 @@ p {
   }
   .hide-in-mobile {
     display: none !important;
+  }
+  .hide-in-desktop {
+    display: inline-flex !important;
   }
   input,
   select,
