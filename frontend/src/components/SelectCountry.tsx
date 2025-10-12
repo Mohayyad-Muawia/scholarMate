@@ -13,9 +13,7 @@ function SelectCountry({ setCountry, value }: SelectCountryProps) {
       aria-label="Select your country"
       className="country-select"
     >
-      <option value="" disabled>
-        🌍&nbsp;&nbsp;&nbsp;اختر الدولة
-      </option>
+      <option value="">🌍&nbsp;&nbsp;&nbsp;اختر الدولة</option>
       {countries.map((country) => (
         <option key={country.code} value={country.code}>
           {country.emoji}&nbsp;&nbsp;&nbsp;{country.name_ar}

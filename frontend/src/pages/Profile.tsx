@@ -113,12 +113,17 @@ export default function Profile() {
     {
       icon: <Target />,
       label: "الدولة الاكثر تكرارا",
-      value: statistics?.byCountry?.[0]?._id
-        ? `${getCountry(statistics.byCountry[0]._id).emoji}\u00A0\u00A0\u00A0${
-            getCountry(statistics.byCountry[0]._id).name_ar
-          }`
-        : "🏳️\u00A0لا توجد",
-      count: statistics?.byCountry?.[0]?.count || 0,
+      value: (() => {
+        if (!statistics?.byCountry?.length) return "🏳️ لا توجد";
+        const topCountry = [...statistics.byCountry].sort(
+          (a, b) => b.count - a.count
+        )[0];
+        const countryInfo = getCountry(topCountry._id);
+        return `${countryInfo.emoji}\u00A0\u00A0\u00A0${countryInfo.name_ar}`;
+      })(),
+      count:
+        [...(statistics?.byCountry || [])].sort((a, b) => b.count - a.count)[0]
+          ?.count || 0,
     },
     {
       icon: <Award />,

@@ -130,7 +130,11 @@ export default function ScholarshipInfo({
           <p>
             <Clock /> الأيام المتبقية للتقديم:
           </p>
-          <span>{calculateDaysLeft(scholarship.deadline)}</span>
+          <span>
+            {scholarship.deadline
+              ? calculateDaysLeft(scholarship.deadline)
+              : "------------"}
+          </span>
         </div>
       </div>
 

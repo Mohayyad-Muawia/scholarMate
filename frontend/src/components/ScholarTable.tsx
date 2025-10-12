@@ -113,7 +113,9 @@ export default function ScholarTable({
                   if (prop === "daysLeft") {
                     return (
                       <td className="hide-in-mobile" key={prop}>
-                        {calculateDaysLeft(sclr.deadline)}
+                        {sclr.deadline
+                          ? calculateDaysLeft(sclr.deadline)
+                          : "------------"}
                       </td>
                     );
                   }

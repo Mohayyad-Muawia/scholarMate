@@ -32,7 +32,7 @@ const text = {
     placeholder: "اختر تاريخ الانتهاء",
   },
   resultsDate: {
-    label: "تاريخ النتائج (اختياري)",
+    label: "تاريخ النتائج",
     placeholder: "اختر تاريخ النتائج",
   },
   status: {
@@ -67,14 +67,14 @@ interface FormData {
   country?: string;
   degreeLevel: "بكالوريوس" | "ماجستير" | "دكتوراه" | "دبلوم" | "أخرى";
   fundingType: "كامل" | "جزئي" | "ذاتي";
-  deadline: string;
+  deadline?: string;
   resultsDate?: string;
   status:
     | "لم يتم التقديم"
     | "في انتظار النتيجة"
     | "تم رفض الطلب"
     | "تم قبول الطلب";
-  link: string;
+  link: string | undefined;
 }
 
 export default function AddForm({ close, scholarshipToEdit }: AddFormProps) {
@@ -150,7 +150,7 @@ export default function AddForm({ close, scholarshipToEdit }: AddFormProps) {
 
     const submissionData = {
       ...formData,
-      deadline: stringToDate(formData.deadline),
+      deadline: formData.deadline ? stringToDate(formData.deadline) : undefined,
       resultsDate: formData.resultsDate
         ? stringToDate(formData.resultsDate)
         : undefined,
@@ -193,7 +193,7 @@ export default function AddForm({ close, scholarshipToEdit }: AddFormProps) {
           />
         </div>
 
-        <div>
+        <div className="optional">
           <label htmlFor="country">{text.country.label}</label>
           <SelectCountry
             value={formData.country || ""}
@@ -238,18 +238,17 @@ export default function AddForm({ close, scholarshipToEdit }: AddFormProps) {
           </select>
         </div>
 
-        <div>
+        <div className="optional">
           <label htmlFor="deadline">{text.deadline.label}</label>
           <input
             type="date"
             id="deadline"
-            value={formData.deadline}
+            value={formData.deadline || ""}
             onChange={handleChange}
-            required
           />
         </div>
 
-        <div>
+        <div className="optional">
           <label htmlFor="resultsDate">{text.resultsDate.label}</label>
           <input
             type="date"
@@ -275,7 +274,7 @@ export default function AddForm({ close, scholarshipToEdit }: AddFormProps) {
           </select>
         </div>
 
-        <div className="mobile-full">
+        <div className="mobile-full optional">
           <label htmlFor="link">{text.link.label}</label>
           <input
             type="url"
@@ -283,7 +282,6 @@ export default function AddForm({ close, scholarshipToEdit }: AddFormProps) {
             placeholder={text.link.placeholder}
             value={formData.link}
             onChange={handleChange}
-            required
           />
         </div>
 

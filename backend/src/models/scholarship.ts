@@ -31,7 +31,6 @@ const scholarshipScheama = new Schema(
     },
     deadline: {
       type: Date,
-      required: true,
     },
     resultsDate: {
       type: Date,
@@ -42,7 +41,6 @@ const scholarshipScheama = new Schema(
     },
     link: {
       type: String,
-      required: true,
     },
   },
   { timestamps: true }

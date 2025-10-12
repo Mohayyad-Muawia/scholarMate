@@ -12,14 +12,14 @@ export type Scholarship = {
   country?: string;
   degreeLevel: "بكالوريوس" | "ماجستير" | "دكتوراه" | "دبلوم" | "أخرى";
   fundingType: "كامل" | "جزئي" | "ذاتي";
-  deadline: Date;
+  deadline?: Date;
   resultsDate?: Date;
   status:
     | "لم يتم التقديم"
     | "في انتظار النتيجة"
     | "تم رفض الطلب"
     | "تم قبول الطلب";
-  link: string;
+  link?: string;
   createdAt?: Date;
   updatedAt?: Date;
 };

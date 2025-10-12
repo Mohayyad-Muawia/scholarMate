@@ -118,21 +118,16 @@ export const addScholarship = async (c: Context) => {
       link,
     } = body;
 
-    if (
-      !title ||
-      !description ||
-      !degreeLevel ||
-      !fundingType ||
-      !deadline ||
-      !status ||
-      !link
-    ) {
+    if (!title || !description || !degreeLevel || !fundingType || !status) {
       return sendResponse(c, 400, false, "يجب إدخال جميع الحقول المطلوبة");
     }
 
-    const parsedDeadline = new Date(deadline);
-    if (isNaN(parsedDeadline.getTime())) {
-      return sendResponse(c, 400, false, "تاريخ الانتهاء غير صالح");
+    let parsedDeadline;
+    if (deadline) {
+      parsedDeadline = new Date(deadline);
+      if (isNaN(parsedDeadline.getTime())) {
+        return sendResponse(c, 400, false, "تاريخ الانتهاء غير صالح");
+      }
     }
 
     let parsedResultsDate;
@@ -309,8 +304,15 @@ export const getStatistics = async (c: Context) => {
       countryStats[country] = (countryStats[country] || 0) + 1;
 
       const now = new Date();
-      const deadline = new Date(scholarship.deadline);
-      if (deadline > now && scholarship.status === "لم يتم التقديم") {
+      let deadline: Date | null = null;
+      if (scholarship.deadline) {
+        deadline = new Date(scholarship.deadline);
+      }
+      if (
+        deadline &&
+        deadline > now &&
+        scholarship.status === "لم يتم التقديم"
+      ) {
         upcomingCount++;
       }
     });
