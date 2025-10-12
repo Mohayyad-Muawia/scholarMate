@@ -68,7 +68,7 @@ export default function Help() {
             whileTap="tap"
             variants={hoverEffect}
           >
-            {isLoading ? "جارٍ التبليغ" : "لتبليغ عن المشكلة"}
+            {isLoading ? "جارٍ التبليغ" : "التبليغ عن المشكلة"}
           </motion.button>
         </form>
       </div>
