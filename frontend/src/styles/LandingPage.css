@@ -65,6 +65,9 @@
         padding: 8px 20px !important;
       }
     }
+    .menu-btn {
+      background: none;
+    }
   }
 
   > div {
