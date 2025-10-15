@@ -1,17 +1,12 @@
-// src/components/AnimateOnScroll.tsx
-
 import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 
-// تعريف أنواع الخصائص (Props) للمكون
 interface AnimateOnScrollProps {
   children: React.ReactNode;
-  delay?: number; // تأخير اختياري
-  className?: string; // كلاسات CSS إضافية
+  delay?: number;
+  className?: string;
   x?: number | string;
 }
-
-// تعريف أشكال الحركة المختلفة التي سنستخدمها
 
 export default function AnimateOnScroll({
   children,
@@ -20,7 +15,7 @@ export default function AnimateOnScroll({
   x = 0,
 }: AnimateOnScrollProps) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.3 }); // once: true لتشغيل الحركة مرة واحدة فقط
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
   const controls = useAnimation();
 
   useEffect(() => {
@@ -46,16 +41,14 @@ export default function AnimateOnScroll({
       hidden: { opacity: 0, x: 50 },
       visible: { opacity: 1, x: 0 },
     },
-    // يمكنك إضافة أي حركات أخرى هنا
   };
 
-  // تحديد نوع الحركة بناءً على الكلاس الممرر
   const getVariantType = () => {
     if (className.includes("fade-in-up")) return "fadeInUp";
     if (className.includes("fade-in-bottom")) return "fadeInBottom";
     if (className.includes("fade-in-left")) return "fadeInLeft";
     if (className.includes("fade-in-right")) return "fadeInRight";
-    return "fadeInUp"; // الحركة الافتراضية
+    return "fadeInUp";
   };
 
   const variantType = getVariantType();
