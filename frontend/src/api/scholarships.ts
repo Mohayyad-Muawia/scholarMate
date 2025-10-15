@@ -2,8 +2,7 @@ import axios from "axios";
 import type { Scholarship } from "../types";
 
 const API_URL =
-  (import.meta.env.VITE_API_URL || "http://10.109.195.216:3000") +
-  "/scholarships";
+  (import.meta.env.VITE_API_URL || "http://localhost:3000") + "/scholarships";
 const api = axios.create({ baseURL: API_URL });
 
 api.interceptors.request.use(
