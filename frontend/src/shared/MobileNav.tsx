@@ -8,7 +8,7 @@ import {
 import "../styles/mobileNav.css";
 import { NavLink } from "react-router-dom";
 const links = [
-  { to: "/", icon: <LayoutGrid />, active: true },
+  { to: "/dashboard", icon: <LayoutGrid />, active: true },
   {
     to: "/scholarships",
     icon: <GraduationCap />,
