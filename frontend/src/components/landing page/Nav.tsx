@@ -110,9 +110,15 @@ export default function Nav() {
               </div>
 
               <div className="mobile-btns">
-                <a href="/login" className="primary start-btn">
-                  <span>تسجيل الدخول</span>
-                </a>
+                {user ? (
+                  <Link to="/dashboard" className="primary start-btn">
+                    <span>لوحة االتحكم</span>
+                  </Link>
+                ) : (
+                  <Link to="/login" className="primary start-btn">
+                    <span>تسجيل الدخول</span>
+                  </Link>
+                )}{" "}
               </div>
             </motion.div>
           </>
