@@ -33,7 +33,7 @@
   --primary-50: #7664e415;
 
   --warning: #f9970c;
-  --warning-bg: #f9970c15;
+  --warning-bg: #f9970c25;
   --error: #e83838;
   --error-bg: #e8383815;
   --success: #10b981;
@@ -53,6 +53,7 @@
   transition: background 0.3s, color 0.3s;
   font-family: "Cairo", sans-serif;
   -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
 }
 
 body {

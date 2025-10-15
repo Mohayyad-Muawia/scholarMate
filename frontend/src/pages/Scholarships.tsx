@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import Header from "../components/Header";
+import Header from "../shared/Header";
 import { useScholarshipsStore } from "../store/scholarshipsStore";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import "../styles/scholarships.css";
-import ScholarTable from "../components/ScholarTable";
+import ScholarTable from "../shared/ScholarTable";
 
 export default function Scholarships() {
   const {

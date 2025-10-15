@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import "../styles/auth.css";
 import { useState } from "react";
 import axios from "axios";
@@ -17,7 +17,12 @@ interface RegisterResponse extends ApiResponse {
 
 export default function Login() {
   const navigate = useNavigate();
-  const { login } = useUserStore();
+  const { user, login } = useUserStore();
+
+  // if there is user
+  if (user) {
+    return <Navigate to="/dashboard" />;
+  }
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -41,7 +46,7 @@ export default function Login() {
         if (user && token) {
           login(user, token);
         }
-        navigate("/");
+        navigate("/dashboard");
       } else {
         toast.error(response.message);
       }

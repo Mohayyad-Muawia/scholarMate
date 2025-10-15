@@ -1,11 +1,11 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import "../styles/auth.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import type { ApiResponse, User } from "../types";
 import useUserStore from "../store/userStore";
 import toast from "react-hot-toast";
-import SelectCountry from "../components/SelectCountry";
+import SelectCountry from "../shared/SelectCountry";
 import { motion } from "framer-motion";
 import { hoverEffect } from "../motion/motionVariants";
 
@@ -19,7 +19,12 @@ interface RegisterResponse extends ApiResponse {
 export default function Register() {
   const navigate = useNavigate();
 
-  const { login } = useUserStore();
+  const { user, login } = useUserStore();
+
+  // if there is user
+  if (user) {
+    return <Navigate to="/dashboard" />;
+  }
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -71,7 +76,7 @@ export default function Register() {
         if (user && token) {
           login(user, token);
         }
-        navigate("/");
+        navigate("/dashboard");
       }
       if (!response.success) {
         // Handle registration error

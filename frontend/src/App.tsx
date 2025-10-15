@@ -3,22 +3,23 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import { Toaster } from "react-hot-toast";
-import Sidebar from "./components/Sidebar";
+import Sidebar from "./shared/Sidebar";
 import Scholarships from "./pages/Scholarships";
 import Profile from "./pages/Profile";
 import About from "./pages/About";
 import Help from "./pages/Help";
-import ProtectedRoute from "./components/ProtectedRoute";
+import ProtectedRoute from "./shared/ProtectedRoute";
 import useThemeStore from "./store/themeStore";
 import { useEffect } from "react";
-import NotFound from "./components/NotFound";
-import MobileNav from "./components/MobileNav";
+import NotFound from "./shared/NotFound";
+import MobileNav from "./shared/MobileNav";
+import LandingPage from "./pages/LandingPage";
 
 function AppContent() {
   const location = useLocation();
   const hideSidebarRoutes = [
     "/profile",
-    "/",
+    "/dashboard",
     "/scholarships",
     "/about",
     "/help",
@@ -46,7 +47,11 @@ function AppContent() {
       {showSidebar && <Sidebar />}
       {showSidebar && <MobileNav />}
       <Routes>
-        <Route path="/" element={<ProtectedRoute children={<Dashboard />} />} />
+        <Route path="/" element={<LandingPage />} />
+        <Route
+          path="/dashboard"
+          element={<ProtectedRoute children={<Dashboard />} />}
+        />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route

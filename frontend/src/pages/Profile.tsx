@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import Header from "../components/Header";
+import Header from "../shared/Header";
 import useUserStore from "../store/userStore";
 import "../styles/profile.css";
 import getCountry from "../utils/getCountry";
-import ProgressBar from "../components/ProgressBar";
+import ProgressBar from "../components/profile/ProgressBar";
 import { useScholarshipsStore } from "../store/scholarshipsStore";
 import {
   AtSign,
@@ -27,11 +27,11 @@ import {
   UserRoundPen,
 } from "lucide-react";
 import formatDate from "../utils/formatDate";
-import Modal from "../components/Modal";
-import InfoForm from "../components/InfoForm";
-import PassForm from "../components/PassForm";
+import Modal from "../shared/Modal";
+import InfoForm from "../components/profile/InfoForm";
+import PassForm from "../components/profile/PassForm";
 import toast from "react-hot-toast";
-import ActionModal from "../components/ActionModal";
+import ActionModal from "../shared/ActionModal";
 import { hoverEffect } from "../motion/motionVariants";
 import { motion } from "framer-motion";
 
