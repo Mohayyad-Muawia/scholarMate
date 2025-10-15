@@ -13,7 +13,7 @@ export default function TheStart() {
       <AnimateOnScroll delay={0.2}>
         <div className="content card">
           <div className="image">
-            <img src="/images/start.png" alt="رحلة التقديم للمنح" />
+            <img src="/images/start.webp" alt="رحلة التقديم للمنح" />
           </div>
 
           <div className="text">
