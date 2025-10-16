@@ -3,7 +3,7 @@ import { sendResponse } from "../utils/response";
 import User from "../models/user";
 import * as bcrypt from "bcryptjs";
 import Scholarship from "../models/scholarship";
-import * as nodemailer from "nodemailer";
+import { Resend } from "resend";
 
 export const updateUser = async (c: Context) => {
   try {
@@ -158,39 +158,34 @@ export const deleteUser = async (c: Context) => {
   }
 };
 
+const resend = new Resend(process.env.RESEND_API_KEY);
+
 export const sendReport = async (c: Context) => {
   try {
     const { name, email, message } = await c.req.json();
 
-    const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 587,
-      secure: false,
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-      logger: true,
-      debug: true,
-      tls: {
-        rejectUnauthorized: false,
-      },
-    });
-
-    await transporter.sendMail({
-      from: `"${name}" <${process.env.EMAIL_USER}>`,
-      to: "mohayyad2.0@gmail.com",
+    const { data, error } = await resend.emails.send({
+      from: "Acme <onboarding@resend.dev>",
+      to: ["mohayyad2.0@gmail.com"],
       subject: "إبلاغ جديد",
       html: `<p><strong>الاسم:</strong> ${name}</p>
-               <p><strong>البريد الالكتروني:</strong> ${email}</p>
-               <p><strong>المشكلة:</strong> ${message}</p>`,
+             <p><strong>البريد الالكتروني:</strong> ${email}</p>
+             <p><strong>المشكلة:</strong> ${message}</p>`,
     });
 
-    return sendResponse(c, 200, true, "تم التبليغ عن المشكلة بنجاح", {
-      name,
-      email,
-      message,
-    });
+    if (error) {
+      console.error("Error from Resend:", error);
+      return sendResponse(
+        c,
+        500,
+        false,
+        "حصل خطأ أثناء إرسال البريد",
+        undefined,
+        error
+      );
+    }
+
+    return sendResponse(c, 200, true, "تم التبليغ عن المشكلة بنجاح", data);
   } catch (err) {
     console.error("Error in sendReport:", err);
     return sendResponse(c, 500, false, "حصل خطأ في السيرفر", undefined, err);
