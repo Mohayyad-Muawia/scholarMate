@@ -28,7 +28,7 @@ export default function Greeting() {
   //   generate random number between 1 and 5
   const randomNumber = Math.floor(Math.random() * 5) + 1;
 
-  if (!user) {
+  if (!user || !user.name) {
     return;
   }
 

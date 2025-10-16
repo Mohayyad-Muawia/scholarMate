@@ -154,7 +154,6 @@ const useUserStore = create<UserState>((set) => ({
         toast.success("تم التبليغ عن المشكلة بنجاح");
 
         set({
-          user: res.data,
           isLoading: false,
         });
         return true;
