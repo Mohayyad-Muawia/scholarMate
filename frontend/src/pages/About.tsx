@@ -175,7 +175,7 @@ export default function About() {
         </div>
 
         <div className="c5 card">
-          <h3>المميرات المستقبلية</h3>
+          <h3>المميزات المستقبلية</h3>
           <ul>
             {futureFeats.map((feat, i) => (
               <li key={i}>{feat}</li>
