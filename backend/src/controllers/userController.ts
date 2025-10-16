@@ -165,7 +165,7 @@ export const sendReport = async (c: Context) => {
     const { name, email, message } = await c.req.json();
 
     const { data, error } = await resend.emails.send({
-      from: "Acme <onboarding@resend.dev>",
+      from: "Report Bot <onboarding@resend.dev>",
       to: ["mohayyad2.0@gmail.com"],
       subject: "إبلاغ جديد",
       html: `<p><strong>الاسم:</strong> ${name}</p>
