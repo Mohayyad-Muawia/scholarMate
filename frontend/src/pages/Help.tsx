@@ -51,7 +51,7 @@ export default function Help() {
             />
           </div>
           <div>
-            <label htmlFor="message">البريد الإلكتروني</label>
+            <label htmlFor="message">وصف المشكلة</label>
             <textarea
               id="message"
               placeholder="قم بكتابة وصف المشكلة بوضوح"
