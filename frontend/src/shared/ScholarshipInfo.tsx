@@ -133,7 +133,7 @@ export default function ScholarshipInfo({
           <span>
             {scholarship.deadline
               ? calculateDaysLeft(scholarship.deadline)
-              : "------------"}
+              : "غير محدد"}
           </span>
         </div>
       </div>
@@ -156,20 +156,26 @@ export default function ScholarshipInfo({
       </div>
 
       <div className="btns">
-        <motion.a
-          href={scholarship.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="primary visit"
-          initial="rest"
-          whileHover="hover"
-          whileTap="tap"
-          variants={hoverEffect}
-        >
-          <ExternalLink />
-          زيارة الموقع
-        </motion.a>
-
+        {scholarship.link === "" ? (
+          <button className="primary visit" disabled>
+            <ExternalLink />
+            لا يوجد رابط للمنحة
+          </button>
+        ) : (
+          <motion.a
+            href={scholarship.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="primary visit"
+            initial="rest"
+            whileHover="hover"
+            whileTap="tap"
+            variants={hoverEffect}
+          >
+            <ExternalLink />
+            زيارة الموقع
+          </motion.a>
+        )}
         <div className="action-btns">
           <motion.button
             className="primary edit"
