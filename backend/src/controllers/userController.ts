@@ -170,6 +170,11 @@ export const sendReport = async (c: Context) => {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
       },
+      logger: true,
+      debug: true,
+      tls: {
+        rejectUnauthorized: false,
+      },
     });
 
     await transporter.sendMail({
