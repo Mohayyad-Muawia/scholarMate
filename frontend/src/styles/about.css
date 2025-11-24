@@ -150,8 +150,9 @@
           gap: 15px;
 
           a {
-            padding: 6px 25px;
+            padding: 6px;
             font-size: 14px;
+            flex: 1;
             box-shadow: var(--shadow);
           }
 

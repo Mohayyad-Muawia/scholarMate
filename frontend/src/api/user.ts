@@ -18,11 +18,15 @@ api.interceptors.request.use(
 
 const handleApiError = (error: any) => {
   if (error.response) {
+    const serverMessage =
+      error.response.data?.message ||
+      error.response.data?.error ||
+      error.response.statusText ||
+      `خطأ في السيرفر: ${error.response.status}`;
+
     return {
       success: false,
-      error:
-        error.response.data?.message ||
-        `خطأ في السيرفر: ${error.response.status}`,
+      error: serverMessage,
       status: error.response.status,
     };
   } else if (error.request) {
